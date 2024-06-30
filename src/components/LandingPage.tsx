@@ -34,7 +34,14 @@ const Hero: React.FC = () => (
     <div className="container mx-auto px-4 text-center">
       <h1 className="text-4xl md:text-6xl font-display font-bold mb-4">サハラの砂漠を走る夢</h1>
       <p className="text-xl md:text-2xl mb-8">世界最過酷なマラソンへの挑戦</p>
-      <img src="/api/placeholder/800/400" alt="サハラ砂漠の風景" className="rounded-lg shadow-md mx-auto mb-8" />
+      <img 
+        src="/images/sahara-hero.jpg"
+        alt="サハラ砂漠の風景" 
+        className="rounded-lg shadow-md mx-auto mb-8 w-full max-w-2xl"
+        loading="lazy"
+        width="1600"
+        height="900"
+      />
       <a href="#support" className="bg-desert-orange hover:bg-opacity-80 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition-colors duration-200">
         応援する
         <ArrowRight className="ml-2" />
@@ -49,7 +56,7 @@ const Introduction: React.FC = () => (
     <div className="container mx-auto px-4">
       <h2 className="text-3xl font-display font-bold mb-8 text-center">自己紹介</h2>
       <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-        <img src="/api/placeholder/300/300" alt="井上周の写真" className="rounded-full w-64 h-64 object-cover" />
+        <img src="/images/profile-photo.jpg" alt="井上周の写真" className="rounded-full w-64 h-64 object-cover" />
         <div>
           <p className="text-lg mb-4">
             こんにちは！井上周と申します。高校生活までを群馬県で育ち、大学では金沢へ行き電気電子系を専攻しました。
