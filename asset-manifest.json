@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/saharasabaka/static/css/main.cfeb709a.css",
+    "main.js": "/saharasabaka/static/js/main.c9acaa57.js",
+    "static/js/453.b4ea123e.chunk.js": "/saharasabaka/static/js/453.b4ea123e.chunk.js",
+    "index.html": "/saharasabaka/index.html",
+    "main.cfeb709a.css.map": "/saharasabaka/static/css/main.cfeb709a.css.map",
+    "main.c9acaa57.js.map": "/saharasabaka/static/js/main.c9acaa57.js.map",
+    "453.b4ea123e.chunk.js.map": "/saharasabaka/static/js/453.b4ea123e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cfeb709a.css",
+    "static/js/main.c9acaa57.js"
+  ]
+}
