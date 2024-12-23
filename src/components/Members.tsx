@@ -15,9 +15,9 @@ interface MemberProps {
 const members: MemberProps[] = [
   {
     name: '井上 周',
-    role: 'チャレンジャー',
-    description: '群馬県出身。エンジニア。2025年サハラマラソンに挑戦。「小さな挑戦が、大きな挑戦につながる」をモットーに、人との出会いを大切にしながら可能性を広げている。',
-    imageUrl: '/images/profile/amane.jpg',
+    role: 'エンジニア',
+    description: '「小さな挑戦が、大きな挑戦につながる」をモットーに、人との出会いを大切にしながら可能性を広げている。',
+    imageUrl: '/images/profile-photo.jpg',
     socialLinks: {
       instagram: 'https://www.instagram.com/saharasabaka/',
       youtube: 'https://www.youtube.com/@saharasabaka',

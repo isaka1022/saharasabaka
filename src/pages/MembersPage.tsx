@@ -8,8 +8,7 @@ const MembersPage: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-12">Members</h2>
         <div className="mb-12">
           <p className="text-center text-gray-700 max-w-2xl mx-auto">
-            サハラマラソンへの挑戦をサポートするメンバーたち。
-            それぞれが異なる経験と専門性を持ち、このプロジェクトに関わっています。
+            「面白そう！まずは走ってみよう！」という気持ちで一緒に2025年のサハラマラソンに挑戦する人たちです。
           </p>
         </div>
         <Members />
