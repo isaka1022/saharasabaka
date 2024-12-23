@@ -1,8 +1,62 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
+
+interface CountdownProps {
+  targetDate: Date;
+}
+
+const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const difference = targetDate.getTime() - new Date().getTime();
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60)
+        });
+      }
+    };
+
+    calculateTimeLeft();
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  return (
+    <div className="flex gap-4 justify-center text-white text-2xl md:text-3xl font-bold">
+      <div className="text-center">
+        <div className="bg-black bg-opacity-50 px-4 py-2 rounded-lg">{timeLeft.days}</div>
+        <div className="text-sm mt-1">DAYS</div>
+      </div>
+      <div className="text-center">
+        <div className="bg-black bg-opacity-50 px-4 py-2 rounded-lg">{timeLeft.hours}</div>
+        <div className="text-sm mt-1">HOURS</div>
+      </div>
+      <div className="text-center">
+        <div className="bg-black bg-opacity-50 px-4 py-2 rounded-lg">{timeLeft.minutes}</div>
+        <div className="text-sm mt-1">MINUTES</div>
+      </div>
+      <div className="text-center">
+        <div className="bg-black bg-opacity-50 px-4 py-2 rounded-lg">{timeLeft.seconds}</div>
+        <div className="text-sm mt-1">SECONDS</div>
+      </div>
+    </div>
+  );
+};
 
 const MainVisual: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const targetDate = new Date('2025-04-04T00:00:00+09:00');
 
   useEffect(() => {
     const video = videoRef.current;
@@ -54,8 +108,8 @@ const MainVisual: React.FC = () => {
         <source src="/saharasabaka/videos/main-visual.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-        <div className="text-center text-white px-4">
+      <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
+        <div className="text-center text-white px-4 mb-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
             小さな挑戦が、大きな挑戦につながる。
           </h1>
@@ -63,9 +117,13 @@ const MainVisual: React.FC = () => {
             だから、まずは一歩踏み出してみる。
           </p>
         </div>
+        <div className="mt-8">
+          <p className="text-white text-lg mb-4">サハラマラソン 2025まで</p>
+          <Countdown targetDate={targetDate} />
+        </div>
       </div>
     </div>
   );
-};
+}
 
 export default MainVisual; 
