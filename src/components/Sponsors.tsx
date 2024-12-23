@@ -22,7 +22,7 @@ const Supporters: React.FC = () => {
             
             <div className="text-left">
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                サハラへの挑戦の様子を見て�����なにか自分もやってみようかな」と思える人が少しでも増えるように、
+                サハラへの挑戦の様子を見て「なにか自分もやってみようかな」と思える人が少しでも増えるように、
                 そして支援の輪が広がるように、クラウドファンディングを実施します。
               </p>
               <p className="text-lg font-semibold text-red-600 mb-4">
