@@ -1,12 +1,23 @@
 {
   "rewrites": [
     {
-      "source": "/saharasabaka/:path*",
-      "destination": "/index.html"
+      "source": "/",
+      "destination": "/saharasabaka"
     },
     {
-      "source": "/:path*",
+      "source": "/saharasabaka/(.*)",
       "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
     }
   ],
   "buildCommand": "npm run build",
