@@ -88,7 +88,7 @@ const MainVisual: React.FC = () => {
       {!isVideoLoaded && (
         <div className="absolute inset-0">
           <img
-            src="/saharasabaka/images/top/sahara_main.jpg"
+            src="/images/top/sahara_main.jpg"
             alt="サハラマラソン"
             className="w-full h-full object-cover"
           />
@@ -105,7 +105,7 @@ const MainVisual: React.FC = () => {
           isVideoLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       >
-        <source src="/saharasabaka/videos/main-visual.mp4" type="video/mp4" />
+        <source src="./videos/main-visual.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
