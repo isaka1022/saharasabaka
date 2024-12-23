@@ -111,10 +111,10 @@ const MainVisual: React.FC = () => {
       <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
         <div className="text-center text-white px-4 mb-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            小さな挑戦が、大きな挑戦につながる。
+            走る理由は、走れば見つかる
           </h1>
           <p className="text-xl md:text-2xl">
-            だから、まずは一歩踏み出してみる。
+            エンジニアはなぜ、サハラ砂漠を走るのか
           </p>
         </div>
         <div className="mt-8">
