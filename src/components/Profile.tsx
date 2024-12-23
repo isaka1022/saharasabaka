@@ -2,9 +2,11 @@ import React from 'react';
 
 const Profile: React.FC = () => {
   return (
-    <section className="py-16 px-4">
-      <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl font-bold text-center mb-8">Profile</h2>
+    <section className="py-20 px-4 bg-white">
+      <div className="container mx-auto max-w-5xl">
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+          <span className="inline-block border-b-4 border-orange-500 pb-2">PROFILE</span>
+        </h2>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
@@ -16,8 +18,8 @@ const Profile: React.FC = () => {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-xl font-bold">井上 周（いのうえ あまね）</h3>
-            <div className="text-base leading-relaxed">
+            <h3 className="text-2xl font-bold text-gray-800">井上 周（いのうえ あまね）</h3>
+            <div className="text-lg text-gray-600 leading-relaxed">
               <p className="mb-4">
                 群馬県出身。もともとゲームやパソコンが好きなインドアな性格で、あまり外に出るよりも家で一人でいるほうが好きな子供でした。
                 そんな私が、なぜサハラ砂漠を走ることを決意したのか。その理由は、人それぞれの「メイソウ」の過程にあります。
@@ -33,10 +35,10 @@ const Profile: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4 mt-6">
+            <div className="flex flex-wrap gap-4 mt-6 p-6 bg-gray-50 rounded-lg">
               <div className="flex items-center">
-                <span className="font-bold mr-2">座右の銘：</span>
-                <span>迷うことは生きること。立ち止まることは前に進むこと。</span>
+                <span className="font-bold text-gray-800 mr-2">座右の銘：</span>
+                <span className="text-gray-600">迷うことは生きること。立ち止まることは前に進むこと。</span>
               </div>
             </div>
           </div>

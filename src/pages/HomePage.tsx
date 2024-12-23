@@ -11,9 +11,11 @@ const HomePage: React.FC = () => {
     <main>
       <MainVisual />
       <Project />
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold text-center mb-8">YouTube</h2>
+      <section className="py-20 px-4 bg-gray-50">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
+            <span className="inline-block border-b-4 border-red-500 pb-2">YOUTUBE</span>
+          </h2>
           <div className="mb-8">
             <YouTubeEmbed videoId="your-latest-video-id" title="最新の活動動画" />
           </div>
@@ -22,7 +24,7 @@ const HomePage: React.FC = () => {
               href="https://www.youtube.com/@saharasabaka"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
             >
               <img
                 src="/images/common/r_youtube.png"
