@@ -22,7 +22,7 @@ const Supporters: React.FC = () => {
             
             <div className="text-left">
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                サハラへの挑戦の様子を見て「なにか自分もやってみようかな」と思える人が少しでも増えるように、
+                サハラへの挑戦の様子を見て�����なにか自分もやってみようかな」と思える人が少しでも増えるように、
                 そして支援の輪が広がるように、クラウドファンディングを実施します。
               </p>
               <p className="text-lg font-semibold text-red-600 mb-4">
@@ -40,6 +40,45 @@ const Supporters: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* スポンサーロゴセクション */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">スポンサー企業</h3>
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-8 items-center max-w-3xl mx-auto">
+            <div className="w-full flex justify-center items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <a href="https://www.mybest.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/images/sponsors/01_mybest.svg"
+                  alt="株式会社マイベスト"
+                  className="w-full h-auto max-h-24 object-contain"
+                />
+              </a>
+            </div>
+            <div className="w-full flex justify-center items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <a href="https://www.yamato-jk.com/" target="_blank" rel="noopener noreferrer">
+                <img
+                  src="/images/sponsors/02_yamatojk.svg"
+                  alt="ヤマト住建株式会社"
+                  className="w-full h-auto max-h-24 object-contain"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* 個人スポンサーセクション */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">個人スポンサー</h3>
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="bg-yellow-50 rounded-full px-6 py-2 text-yellow-800 font-medium hover:bg-yellow-100 transition-colors">
+                  naopr
+                </div>
               </div>
             </div>
           </div>
