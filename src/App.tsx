@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -9,25 +9,43 @@ import SupportPage from './pages/SupportPage';
 import ContactPage from './pages/ContactPage';
 import MembersPage from './pages/MembersPage';
 
+const Layout = ({ children }: { children: React.ReactNode }) => (
+  <div className="min-h-screen bg-white flex flex-col">
+    <Header />
+    <div className="flex-grow">{children}</div>
+    <Footer />
+  </div>
+);
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout><HomePage /></Layout>
+  },
+  {
+    path: '/project',
+    element: <Layout><ProjectPage /></Layout>
+  },
+  {
+    path: '/profile',
+    element: <Layout><ProfilePage /></Layout>
+  },
+  {
+    path: '/support',
+    element: <Layout><SupportPage /></Layout>
+  },
+  {
+    path: '/members',
+    element: <Layout><MembersPage /></Layout>
+  },
+  {
+    path: '/contact',
+    element: <Layout><ContactPage /></Layout>
+  }
+]);
+
 function App() {
-  return (
-    <BrowserRouter basename="/saharasabaka">
-      <div className="min-h-screen bg-white flex flex-col">
-        <Header />
-        <div className="flex-grow">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/project" element={<ProjectPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/support" element={<SupportPage />} />
-            <Route path="/members" element={<MembersPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
-        </div>
-        <Footer />
-      </div>
-    </BrowserRouter>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

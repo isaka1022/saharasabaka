@@ -1,11 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/",
-      "destination": "/saharasabaka"
-    },
-    {
-      "source": "/saharasabaka/(.*)",
+      "source": "/(.*)",
       "destination": "/index.html"
     }
   ],
