@@ -111,14 +111,14 @@ const MainVisual: React.FC = () => {
       <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center">
         <div className="text-center text-white px-4 mb-8">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            走る理由は、走れば見つかる
+            サハラマラソン 2025
           </h1>
           <p className="text-xl md:text-2xl">
-            エンジニアはなぜ、サハラ砂漠を走るのか
+            2024.04.04 〜 2025.04.14
           </p>
         </div>
         <div className="mt-8">
-          <p className="text-white text-lg mb-4">サハラマラソン 2025まで</p>
+          <p className="text-white text-lg mb-4">開始日まで</p>
           <Countdown targetDate={targetDate} />
         </div>
       </div>

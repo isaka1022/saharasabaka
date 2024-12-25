@@ -21,9 +21,9 @@ const Project: React.FC = () => {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-gray-800">サハラサバカ</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              2024年3月、フルマラソンの完走経験すらなかったエンジニアの僕ですが、世界一過酷といわれる「サハラマラソン」への挑戦を決めました。
-              そこから1年弱準備とたくさんの人たちの応援をいただきながら、2025年4月の完走を目指します。
-              一見無謀で"バカ"とも思えるこの取り組みを「サハラサバカ」と名付けました。
+              2024年3月、フルマラソンの完走経験すらなかったエンジニア���世界一過酷といわれる「サハラマラソン」への挑戦を決めました。
+              そこからたくさんの人たちの応援をいただきながら、1年かけて準備をし、2025年4月の完走を目指します。
+              その無謀さやレースの過酷さから"バカ"とも思えるこの取り組みを「サハラサバカ」と名付けました。
             </p>
           </div>
         </div>
@@ -43,6 +43,15 @@ const Project: React.FC = () => {
               参加者は全ての装備と食料を背負って走り、水だけが主催者から支給されます。
               コース上約10kmごとに設置されたチェックポイントを頼りに、灼熱の砂漠を走ります。
             </p>
+
+            <div className="relative mb-10 max-w-2xl mx-auto">
+              <div className="absolute -inset-4 bg-orange-100 rounded-lg opacity-50 transform -rotate-3"></div>
+              <img
+                src="/images/sahara-hero.jpg"
+                alt="サハラマラソンヒーロー"
+                className="relative w-full h-auto object-cover rounded-lg shadow-lg"
+              />
+            </div>
             
             {/* ステージ情報 */}
             <div className="bg-gray-50 rounded-xl p-6 mt-8">
