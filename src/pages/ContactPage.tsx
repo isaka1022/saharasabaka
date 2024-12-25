@@ -8,22 +8,18 @@ const ContactPage: React.FC = () => {
         
         <div className="bg-white shadow-lg rounded-lg p-8">
           <p className="text-center mb-8">
-            お問い合わせは以下のInstagramのDMからお願いいたします。
+            お問い合わせは以下のフォームからお願いいたします。
+            スポンサーに関するお問い合わせもこちらからお願いいたします。
           </p>
           
           <div className="text-center">
             <a
-              href="https://www.instagram.com/saharasabaka/"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf6NUloIZWpsoxhZCU7_R3mDDTmwl5fdsMXFhEzHLvbRosALg/viewform?usp=header"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:opacity-90 transition-opacity"
             >
-              <img
-                src="/images/common/r_instagram.png"
-                alt="Instagram"
-                className="w-6 h-6"
-              />
-              <span>Instagram DMを開く</span>
+              <span>お問い合わせフォームを開く</span>
             </a>
           </div>
         </div>

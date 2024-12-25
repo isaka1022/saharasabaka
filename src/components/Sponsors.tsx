@@ -22,7 +22,7 @@ const Supporters: React.FC = () => {
             
             <div className="text-left">
               <p className="text-lg text-gray-600 leading-relaxed mb-4">
-                サハラへの挑戦の様子を見て「なにか自分もやってみようかな」と思える人が少しでも増えるように、
+                サハラへの挑戦の様子を見て���なにか自分もやってみようかな」と思える人が少しでも増えるように、
                 そして支援の輪が広がるように、クラウドファンディングを実施します。
               </p>
               <p className="text-lg font-semibold text-red-600 mb-4">
@@ -94,7 +94,9 @@ const Supporters: React.FC = () => {
             </p>
             <div className="flex justify-center">
               <a
-                href="#contact"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf6NUloIZWpsoxhZCU7_R3mDDTmwl5fdsMXFhEzHLvbRosALg/viewform?usp=header"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center px-8 py-4 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
               >
                 スポンサーに関するお問い合わせ
