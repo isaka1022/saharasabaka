@@ -8,6 +8,7 @@ import ProfilePage from './pages/ProfilePage';
 import SupportPage from './pages/SupportPage';
 import ContactPage from './pages/ContactPage';
 import MembersPage from './pages/MembersPage';
+import RacePage from './pages/RacePage';
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div className="min-h-screen bg-white flex flex-col">
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Layout><ContactPage /></Layout>
+  },
+  {
+    path: '/race',
+    element: <Layout><RacePage /></Layout>
   }
 ]);
 

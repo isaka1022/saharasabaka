@@ -8,6 +8,7 @@ const Header: React.FC = () => {
     { label: 'TOP', path: '/' },
     { label: 'PROJECT', path: '/project' },
     { label: 'PROFILE', path: '/profile' },
+    { label: 'RACE', path: '/race' },
     // { label: 'MEMBERS', path: '/members' },
     { label: 'SUPPORT', path: '/support' },
     { label: 'CONTACT', path: '/contact' },
