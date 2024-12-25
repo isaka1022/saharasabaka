@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
             <span className="inline-block border-b-4 border-red-500 pb-2">YOUTUBE</span>
           </h2>
           <div className="mb-8">
-            <YouTubeEmbed videoId="your-latest-video-id" title="最新の活動動画" />
+            <YouTubeEmbed videoId="1VmMQglcQaQ" title="最新の活動動画" />
           </div>
           <div className="text-center">
             <a
@@ -26,11 +26,14 @@ const HomePage: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
             >
-              <img
-                src="/images/common/r_youtube.png"
-                alt="YouTube"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
                 className="w-6 h-6"
-              />
+              >
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z" />
+              </svg>
               <span>チャンネルを見る</span>
             </a>
           </div>
