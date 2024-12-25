@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="text-center text-sm text-gray-500">
-          <p>Copyright © 2024 Sahara Sabaka All Rights Reserved.</p>
+          <p>Copyright © 2024 サハラサバカ All Rights Reserved.</p>
         </div>
       </div>
     </footer>
