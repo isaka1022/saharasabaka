@@ -50,22 +50,18 @@ const Supporters: React.FC = () => {
           <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">スポンサー企業</h3>
           <div className="grid grid-cols-2 md:grid-cols-2 gap-8 items-center max-w-3xl mx-auto">
             <div className="w-full flex justify-center items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <a href="https://www.mybest.com/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/images/sponsors/01_mybest.svg"
-                  alt="株式会社マイベスト"
-                  className="w-full h-auto max-h-24 object-contain"
-                />
-              </a>
+              <img
+                src="/images/sponsors/01_mybest.svg"
+                alt="株式会社マイベスト"
+                className="w-full h-auto max-h-24 object-contain"
+              />
             </div>
             <div className="w-full flex justify-center items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-              <a href="https://www.yamato-jk.com/" target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/images/sponsors/02_yamatojk.svg"
-                  alt="ヤマト住建株式会社"
-                  className="w-full h-auto max-h-24 object-contain"
-                />
-              </a>
+              <img
+                src="/images/sponsors/02_yamatojk.svg"
+                alt="ヤマト住建株式会社"
+                className="w-full h-auto max-h-24 object-contain"
+              />
             </div>
           </div>
         </div>
