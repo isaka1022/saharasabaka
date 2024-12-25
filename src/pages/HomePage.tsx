@@ -1,7 +1,7 @@
 import React from 'react';
 import MainVisual from '../components/MainVisual';
 import Project from '../components/Project';
-import InstagramFeed from '../components/InstagramFeed';
+// import InstagramFeed from '../components/InstagramFeed';
 import Profile from '../components/Profile';
 import Supporters from '../components/Sponsors';
 import YouTubeEmbed from '../components/YouTubeEmbed';
@@ -12,11 +12,11 @@ const HomePage: React.FC = () => {
       <MainVisual />
       <Project />
       <section className="py-20 px-4 bg-gray-50">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-3xl">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
             <span className="inline-block border-b-4 border-red-500 pb-2">YOUTUBE</span>
           </h2>
-          <div className="mb-8">
+          <div className="mb-4">
             <YouTubeEmbed videoId="1VmMQglcQaQ" title="最新の活動動画" />
           </div>
           <div className="text-center">
@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-      <InstagramFeed />
+      {/* <InstagramFeed /> */}
       <Profile />
       <Supporters />
     </main>

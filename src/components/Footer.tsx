@@ -10,7 +10,7 @@ const menuItems: MenuItem[] = [
   { label: 'TOP', path: '/' },
   { label: 'PROJECT', path: '/project' },
   { label: 'PROFILE', path: '/profile' },
-  { label: 'MEMBERS', path: '/members' },
+  // { label: 'MEMBERS', path: '/members' },
   { label: 'SUPPORT', path: '/support' },
   { label: 'CONTACT', path: '/contact' },
 ];
