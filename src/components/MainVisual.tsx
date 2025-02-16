@@ -85,15 +85,6 @@ const MainVisual: React.FC = () => {
 
   return (
     <div className="relative h-screen overflow-hidden">
-      {!isVideoLoaded && (
-        <div className="absolute inset-0">
-          <img
-            src="/images/top/sahara_main.jpg"
-            alt="サハラマラソン"
-            className="w-full h-full object-cover"
-          />
-        </div>
-      )}
       <video
         ref={videoRef}
         autoPlay
