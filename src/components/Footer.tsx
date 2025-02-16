@@ -38,6 +38,10 @@ const socialLinks = [
 ];
 
 const Footer: React.FC = () => {
+  const startYear = 2024;
+  const currentYear = new Date().getFullYear();
+  const yearDisplay = currentYear > startYear ? `${startYear}-${currentYear}` : startYear;
+
   return (
     <footer className="bg-gray-100 pt-12 pb-6">
       <div className="container mx-auto px-4">
@@ -72,7 +76,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="text-center text-sm text-gray-500">
-          <p>Copyright © 2024 サハラサバカ All Rights Reserved.</p>
+          <p>Copyright © {yearDisplay} サハラサバカ All Rights Reserved.</p>
         </div>
       </div>
     </footer>
