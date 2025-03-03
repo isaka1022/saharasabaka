@@ -1,0 +1,124 @@
+{
+  "header": {
+    "home": "Home",
+    "members": "Members",
+    "projects": "Projects",
+    "profile": "Profile",
+    "race": "Race",
+    "support": "Support",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Make Your Dreams Come True",
+    "subtitle": "Beyond Limits. Running Through the Desert.",
+    "viewMore": "Learn More"
+  },
+  "mainVisual": {
+    "title": "Sahara Marathon 2025",
+    "subtitle": "Educational Support for Children in Africa",
+    "date": "2024.04.04 - 2025.04.14",
+    "countdown": "Time until start"
+  },
+  "profile": {
+    "title": "Profile",
+    "name": "Amane Inoue",
+    "occupation": "Software engineer from Gunma Prefecture, currently working at a startup in Tokyo.",
+    "story": "In the summer of 2023, I participated in La Tomatina (tomato festival) in Spain with a friend. That experience and the mindset of 'Let's try anything!' led me to decide to participate in the Marathon des Sables, running 250km across the Sahara Desert in 7 days.",
+    "motivation": "Despite having little experience in long-distance running, I am determined to complete the race and am preparing thoroughly. With the support from our crowdfunding campaign and everyone's encouragement, I am steadily training day by day."
+  },
+  "project": {
+    "title": "Project",
+    "viewMore": "View More",
+    "description": "In March 2024, I decided to take on the challenge of the Marathon des Sables, known as the 'world's toughest race,' without any prior marathon experience. With support from many people, I am preparing for a year to complete the race in April 2025. Due to the seemingly reckless nature and extreme difficulty of this challenge, we named this project 'Sahara Sabaka'.",
+    "about": {
+      "title": "What is Marathon des Sables?",
+      "description1": "Marathon des Sables THE LEGENDARY, commonly known as the Sahara Marathon, is the world's most challenging marathon event held since 1986. Set in Morocco's Sahara Desert, participants spend 9 out of 11 days in the desert, completing approximately 250km divided into 6 stages.",
+      "description2": "Participants must carry all their equipment and food, with only water provided by the organizers. They navigate through the scorching desert using checkpoints placed approximately every 10km.",
+      "stages": "Stage Structure",
+      "officialSite": "Official Website"
+    }
+  },
+  "sponsors": {
+    "title": "Sponsors",
+    "crowdfunding": {
+      "title": "Crowdfunding",
+      "description": "We are conducting a crowdfunding campaign to inspire others to take on their own challenges and to expand our support network through this Sahara Desert challenge.",
+      "ended": "※The crowdfunding campaign has ended. Thank you for all your support.",
+      "viewResults": "View Crowdfunding Results"
+    },
+    "plans": {
+      "title": "Sponsorship Plans",
+      "individual": {
+        "title": "Individual Sponsorship Plans",
+        "message": {
+          "title": "Message Plan",
+          "description": "Send your support message"
+        },
+        "video": {
+          "title": "Video Letter Plan",
+          "description": "Receive activity report video letters"
+        },
+        "party": {
+          "title": "Party Plan",
+          "description": "Invitation to post-return party"
+        },
+        "report": {
+          "title": "Activity Report Plan",
+          "description": "Receive comprehensive activity reports"
+        }
+      },
+      "corporate": {
+        "title": "Corporate Sponsorship Plans",
+        "video": {
+          "title": "Video Sponsor",
+          "description": "Sponsor display in videos"
+        },
+        "site": {
+          "title": "Site Sponsor",
+          "description": "Sponsor display on website"
+        }
+      }
+    },
+    "corporate": {
+      "title": "Corporate Sponsors"
+    },
+    "individual": {
+      "title": "Individual Sponsors"
+    },
+    "recruitment": {
+      "title": "Sponsor Recruitment",
+      "description": "We are looking for sponsors to support our Marathon des Sables challenge. Whether you are a company or an individual, please contact us through the form below if you would like to provide support.",
+      "contact": "Contact About Sponsorship"
+    }
+  },
+  "journey": {
+    "title": "Journey",
+    "milestones": {
+      "meeting": {
+        "date": "August 2023",
+        "title": "Encounter with Marathon des Sables",
+        "description": "Met a Marathon des Sables participant at La Tomatina"
+      },
+      "decision": {
+        "date": "January 2024",
+        "title": "Decision to Participate",
+        "description": "Decided to enter the 2025 event"
+      },
+      "training": {
+        "date": "April 2024",
+        "title": "Training Begins",
+        "description": "Started full-scale desert marathon preparation"
+      },
+      "race": {
+        "date": "April 2025",
+        "title": "Marathon des Sables",
+        "description": "250km desert challenge"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "For inquiries about Sahara Sabaka or sponsorship, please use the form below.",
+    "button": "Open Contact Form"
+  }
+} 

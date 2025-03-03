@@ -13,7 +13,7 @@ import RacePage from './pages/RacePage';
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div className="min-h-screen bg-white flex flex-col">
     <Header />
-    <div className="flex-grow">{children}</div>
+    <div className="flex-grow pt-16">{children}</div>
     <Footer />
   </div>
 );
@@ -46,6 +46,14 @@ const router = createBrowserRouter([
   {
     path: '/race',
     element: <Layout><RacePage /></Layout>
+  },
+  {
+    path: '/privacy',
+    element: <Layout><div className="container mx-auto px-4 py-12"><h1 className="text-3xl font-bold mb-6">プライバシーポリシー</h1><p>準備中です。</p></div></Layout>
+  },
+  {
+    path: '/terms',
+    element: <Layout><div className="container mx-auto px-4 py-12"><h1 className="text-3xl font-bold mb-6">利用規約</h1><p>準備中です。</p></div></Layout>
   }
 ]);
 

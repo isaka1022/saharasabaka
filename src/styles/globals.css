@@ -2,6 +2,66 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/* ベーススタイル */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply font-sans text-gray-800 bg-sand-50;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+
+  ::selection {
+    @apply bg-primary-200 text-primary-900;
+  }
+}
+
+/* コンポーネントスタイル */
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-600 focus:ring-primary-500 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-secondary-600 focus:ring-secondary-500 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary-500 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 relative inline-block;
+  }
+  
+  .section-title::after {
+    @apply content-[''] absolute -bottom-2 left-0 w-1/2 h-1 bg-primary rounded;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-soft hover:shadow-lg transition-shadow duration-300 overflow-hidden;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition duration-200;
+  }
+
+  .link {
+    @apply text-primary-600 hover:text-primary-700 underline decoration-2 underline-offset-2 transition-colors duration-200;
+  }
+}
+
 /* カスタムスタイル */
 .bg-gradient-overlay {
   background: linear-gradient(
@@ -9,6 +69,43 @@
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.3)
   );
+}
+
+.bg-desert-gradient {
+  background: linear-gradient(
+    135deg,
+    theme('colors.sand.300'),
+    theme('colors.desert.300')
+  );
+}
+
+/* スクロールバーのカスタマイズ */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-sand-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-300 rounded-full hover:bg-primary-400;
+}
+
+/* 画像のぼかし効果 */
+.blur-load {
+  background-size: cover;
+  background-position: center;
+}
+
+.blur-load.loaded > img {
+  opacity: 1;
+}
+
+.blur-load > img {
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
 }
 
 /* アニメーション */
@@ -43,9 +140,12 @@
       transform: translateY(0px);
     }
   }
-}
 
-/* スムーズなスクロール挙動 */
-html {
-  scroll-behavior: smooth;
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
 }

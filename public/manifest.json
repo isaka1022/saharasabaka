@@ -1,15 +1,32 @@
 {
   "short_name": "サハラサバカ",
   "name": "サハラサバカ - サハラマラソンへの挑戦",
+  "description": "サハラマラソンに挑戦するプロジェクト。過酷な砂漠を走り抜け、限界に挑む私たちの旅路をご覧ください。",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "images/icons/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icons/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#F97316",
+  "background_color": "#FFF7ED",
+  "orientation": "portrait",
+  "categories": ["sports", "fitness", "lifestyle"],
+  "lang": "ja-JP"
 }
