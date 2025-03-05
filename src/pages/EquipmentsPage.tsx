@@ -15,15 +15,17 @@ const EquipmentsPage: React.FC = () => {
           model: "Ultra Carrier Shirt 3.0",
           image: "/images/equipments/backpack.jpg",
           description: "レース中の全ての装備を収納するバックパック。軽量かつ背負いやすさを重視して選定。",
-          link: "https://www.waa-ultra.com/en/ultra-carrier-shirt/37-ultra-carrier-shirt-30.html"
+          link: "https://www.waa-ultra.com/en/ultra-carrier-shirt/37-ultra-carrier-shirt-30.html",
+          status: "決定"
         },
         {
           name: "寝袋",
-          brand: "Mountain Hardwear",
-          model: "Phantom 30F/-1C",
+          brand: null,
+          model: null,
           image: "/images/equipments/sleepingbag.jpg",
-          description: "夜間の砂漠の寒さから身を守るための超軽量寝袋。最小限の重量で十分な保温性能を確保。",
-          link: "https://www.mountainhardwear.com/"
+          description: "夜間の砂漠の寒さから身を守るための超軽量寝袋。最小限の重量で十分な保温性能を確保するものを選定予定。",
+          link: null,
+          status: "検討中"
         },
         {
           name: "ヘッドランプ",
@@ -31,7 +33,8 @@ const EquipmentsPage: React.FC = () => {
           model: "SWIFT RL",
           image: "/images/equipments/headlamp.jpg",
           description: "夜間走行や夜のキャンプで使用。充電式で明るさ調整可能。",
-          link: "https://www.petzl.com/INT/en/Sport/PERFORMANCE-headlamps/SWIFT-RL"
+          link: "https://www.petzl.com/INT/en/Sport/PERFORMANCE-headlamps/SWIFT-RL",
+          status: "決定"
         }
       ]
     },
@@ -45,23 +48,26 @@ const EquipmentsPage: React.FC = () => {
           model: "Speedgoat 5",
           image: "/images/equipments/shoes.jpg",
           description: "砂漠の不安定な地形でも安定して走れるトレイルランニングシューズ。砂の侵入を防ぐゲイター付き。",
-          link: "https://www.hoka.com/"
+          link: "https://www.hoka.com/",
+          status: "決定"
         },
         {
           name: "ランニングウェア",
-          brand: "Salomon",
-          model: "S/LAB SENSE TEE",
+          brand: null,
+          model: null,
           image: "/images/equipments/shirt.jpg",
-          description: "UVカット機能と速乾性を備えた軽量シャツ。砂漠の強い日差しから身を守る。",
-          link: "https://www.salomon.com/"
+          description: "UVカット機能と速乾性を備えた軽量シャツ。砂漠の強い日差しから身を守るものを選定予定。",
+          link: null,
+          status: "検討中"
         },
         {
           name: "サングラス",
-          brand: "Oakley",
-          model: "Radar EV Path",
+          brand: null,
+          model: null,
           image: "/images/equipments/sunglasses.jpg",
           description: "砂漠の強い日差しと砂から目を保護するためのスポーツサングラス。",
-          link: "https://www.oakley.com/"
+          link: null,
+          status: "検討中"
         }
       ]
     },
@@ -71,11 +77,12 @@ const EquipmentsPage: React.FC = () => {
       items: [
         {
           name: "フリーズドライ食品",
-          brand: "Mountain House",
-          model: "Various",
+          brand: null,
+          model: null,
           image: "/images/equipments/freezedried.jpg",
-          description: "軽量で栄養価の高いフリーズドライ食品。お湯を注ぐだけで食べられる。",
-          link: "https://mountainhouse.com/"
+          description: "軽量で栄養価の高いフリーズドライ食品。お湯を注ぐだけで食べられるものを選定予定。",
+          link: null,
+          status: "検討中"
         },
         {
           name: "エナジージェル",
@@ -83,15 +90,17 @@ const EquipmentsPage: React.FC = () => {
           model: "Energy Gel",
           image: "/images/equipments/energygel.jpg",
           description: "走行中のエネルギー補給用。素早く吸収される炭水化物を含む。",
-          link: "https://guenergy.com/"
+          link: "https://guenergy.com/",
+          status: "決定"
         },
         {
           name: "ソルトタブレット",
-          brand: "SaltStick",
-          model: "Caps",
+          brand: null,
+          model: null,
           image: "/images/equipments/salttablets.jpg",
           description: "暑さによる発汗で失われる電解質を補給するためのタブレット。",
-          link: "https://saltstick.com/"
+          link: null,
+          status: "検討中"
         }
       ]
     }
@@ -110,16 +119,18 @@ const EquipmentsPage: React.FC = () => {
           image: "/images/equipments/sponsored-shoes.jpg",
           description: "株式会社〇〇様よりご提供いただいた砂漠走行用シューズ。",
           sponsor: "株式会社〇〇",
-          sponsorLink: "https://example.com"
+          sponsorLink: "https://example.com",
+          status: "決定"
         },
         {
           name: "サプリメント",
-          brand: "〇〇製薬",
-          model: "ウルトラエナジー",
+          brand: null,
+          model: null,
           image: "/images/equipments/sponsored-supplements.jpg",
-          description: "〇〇製薬様よりご提供いただいた長時間運動用サプリメント。",
-          sponsor: "〇〇製薬",
-          sponsorLink: "https://example.com"
+          description: "長時間運動用サプリメントのスポンサーを募集中です。",
+          sponsor: null,
+          sponsorLink: null,
+          status: "募集中"
         }
       ]
     },
@@ -129,12 +140,13 @@ const EquipmentsPage: React.FC = () => {
       items: [
         {
           name: "防水ポーチ",
-          brand: "Sea to Summit",
-          model: "Ultra-Sil Dry Sack",
+          brand: null,
+          model: null,
           image: "/images/equipments/sponsored-pouch.jpg",
-          description: "〇〇様よりご提供いただいた貴重品保管用防水ポーチ。",
-          sponsor: "〇〇様",
-          sponsorLink: null
+          description: "貴重品保管用防水ポーチのサポーターを募集中です。",
+          sponsor: null,
+          sponsorLink: null,
+          status: "募集中"
         }
       ]
     }
@@ -187,16 +199,25 @@ const EquipmentsPage: React.FC = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.items.map((item, itemIndex) => (
                   <div key={itemIndex} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-48 overflow-hidden relative">
                       <img 
                         src={item.image} 
                         alt={item.name} 
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       />
+                      <div className={`absolute top-0 right-0 px-3 py-1 text-sm font-medium text-white ${
+                        item.status === '決定' ? 'bg-green-500' : 'bg-yellow-500'
+                      }`}>
+                        {item.status}
+                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2">{item.name}</h3>
-                      <p className="text-sm text-gray-500 mb-4">{item.brand} {item.model}</p>
+                      {item.brand && item.model ? (
+                        <p className="text-sm text-gray-500 mb-4">{item.brand} {item.model}</p>
+                      ) : (
+                        <p className="text-sm text-gray-500 mb-4">メーカー・モデル検討中</p>
+                      )}
                       <p className="text-gray-600 mb-4">{item.description}</p>
                       {item.link && (
                         <a 
@@ -221,7 +242,7 @@ const EquipmentsPage: React.FC = () => {
           <div className="bg-yellow-50 p-8 rounded-lg shadow-md max-w-3xl mx-auto mt-16">
             <h2 className="text-2xl font-bold mb-4 text-center">装備の総重量</h2>
             <p className="text-lg text-center mb-6">
-              必須装備と食料を含めた総重量: <span className="font-bold text-yellow-700">約8kg</span>
+              必須装備と食料を含めた総重量: <span className="font-bold text-yellow-700">約8kg（予定）</span>
             </p>
             <p className="text-gray-600">
               サハラマラソンのルールでは、食料、装備、個人的な持ち物を含めて全て自分で持ち運ぶ必要があります。
@@ -254,32 +275,47 @@ const EquipmentsPage: React.FC = () => {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.items.map((item, itemIndex) => (
                   <div key={itemIndex} className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-                    <div className="h-48 overflow-hidden">
+                    <div className="h-48 overflow-hidden relative">
                       <img 
                         src={item.image} 
                         alt={item.name} 
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                       />
+                      <div className={`absolute top-0 right-0 px-3 py-1 text-sm font-medium text-white ${
+                        item.status === '決定' ? 'bg-green-500' : 'bg-blue-500'
+                      }`}>
+                        {item.status}
+                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2">{item.name}</h3>
-                      <p className="text-sm text-gray-500 mb-4">{item.brand} {item.model}</p>
+                      {item.brand && item.model ? (
+                        <p className="text-sm text-gray-500 mb-4">{item.brand} {item.model}</p>
+                      ) : (
+                        <p className="text-sm text-gray-500 mb-4">メーカー・モデル未定</p>
+                      )}
                       <p className="text-gray-600 mb-4">{item.description}</p>
-                      <div className="flex items-center mt-4 pt-4 border-t border-gray-200">
-                        <span className="text-sm font-medium text-gray-500 mr-2">提供:</span>
-                        {item.sponsorLink ? (
-                          <a 
-                            href={item.sponsorLink} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-yellow-600 hover:text-yellow-700 font-medium"
-                          >
-                            {item.sponsor}
-                          </a>
-                        ) : (
-                          <span className="font-medium">{item.sponsor}</span>
-                        )}
-                      </div>
+                      {item.sponsor ? (
+                        <div className="flex items-center mt-4 pt-4 border-t border-gray-200">
+                          <span className="text-sm font-medium text-gray-500 mr-2">提供:</span>
+                          {item.sponsorLink ? (
+                            <a 
+                              href={item.sponsorLink} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-yellow-600 hover:text-yellow-700 font-medium"
+                            >
+                              {item.sponsor}
+                            </a>
+                          ) : (
+                            <span className="font-medium">{item.sponsor}</span>
+                          )}
+                        </div>
+                      ) : (
+                        <div className="flex items-center mt-4 pt-4 border-t border-gray-200">
+                          <span className="text-sm font-medium text-blue-600">スポンサー募集中</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
