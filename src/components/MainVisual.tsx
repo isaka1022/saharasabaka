@@ -108,9 +108,12 @@ const MainVisual: React.FC = () => {
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70 flex flex-col items-center justify-center px-4">
         <div className="text-center text-white mb-8 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-display">
-            サハラマラソン <span className="text-primary">2025</span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-2 font-display">
+            サハラサバカ
           </h1>
+          <p className="text-xl md:text-2xl mb-4 text-white/90">
+            - エンジニア、サハラを走る - <br />サハラマラソン2025への挑戦
+          </p>
           <p className="text-xl md:text-2xl font-light">
             2025.04.04 〜 2025.04.14
           </p>

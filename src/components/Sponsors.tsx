@@ -132,7 +132,7 @@ const Supporters: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="https://brainnavi-online.com/set/5607"
+                      href="https://brainnavi-online.com/set/5623"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block p-4 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition-colors"
@@ -151,7 +151,7 @@ const Supporters: React.FC = () => {
                   </li>
                   <li>
                     <a
-                      href="https://brainnavi-online.com/set/5607"
+                      href="https://brainnavi-online.com/set/5624"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block p-4 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition-colors"
@@ -256,12 +256,12 @@ const Supporters: React.FC = () => {
 
         {/* 物資提供セクション */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">物資提供</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">装備サポート</h3>
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-lg shadow-md p-8">
               <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
-                サハラマラソンに必要な物資のご提供も募集しております。<br />
-                ご提供いただける方は、下記のお問い合わせフォームよりご連絡ください。
+                サハラマラソンに必要な装備や道具のご提供も募集しております。<br />
+                ご協力いただける方は、下記のお問い合わせフォームよりご連絡ください。
               </p>
               <div className="flex justify-center">
                 <a
@@ -270,7 +270,7 @@ const Supporters: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-8 py-4 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
                 >
-                  物資提供に関するお問い合わせ
+                  装備サポートに関するお問い合わせ
                 </a>
               </div>
             </div>

@@ -34,7 +34,17 @@ const RacePage: React.FC = () => {
       },
       details: '',
       url: 'https://www.izutrailjourney.com/jptop/'
-    }
+    },
+    {
+      name: "東京マラソン2025",
+      date: "2025年3月2日（日）",
+      time: "04:06:59",
+      url: "https://www.marathon.tokyo/",
+      result: {
+        overall: "13,235位",
+        category: null
+      }
+    },
   ];
 
   return (

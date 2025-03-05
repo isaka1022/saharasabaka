@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
               <img src="/logo.png" alt="サハラサバカ" className="h-12 w-auto" />
             </Link>
             <p className="text-gray-300 mb-6">
-              サハラマラソンに挑戦するプロジェクト。過酷な砂漠を走り抜け、限界に挑む私たちの旅路をご覧ください。
+              エンジニア、サハラを走る。世界一過酷なレースへの挑戦です。
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (

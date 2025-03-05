@@ -5,6 +5,7 @@
     "projects": "プロジェクト",
     "profile": "プロフィール",
     "race": "レース",
+    "equipments": "装備",
     "support": "サポート",
     "contact": "お問い合わせ"
   },
@@ -14,8 +15,8 @@
     "viewMore": "詳しく見る"
   },
   "mainVisual": {
-    "title": "サハラマラソン 2025",
-    "subtitle": "アフリカの子どもたちに教育支援を",
+    "title": "サハラサバカ",
+    "subtitle": "サハラマラソン2025の挑戦",
     "date": "2024.04.04 〜 2025.04.14",
     "countdown": "開始日まで"
   },

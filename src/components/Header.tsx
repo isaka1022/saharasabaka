@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { t } = useTranslation();
 
   // スクロール検出
   useEffect(() => {
@@ -35,14 +37,13 @@ const Header: React.FC = () => {
     };
   }, [isOpen]);
 
-  const menuItems = [
-    { label: 'TOP', path: '/' },
-    { label: 'PROJECT', path: '/project' },
-    { label: 'PROFILE', path: '/profile' },
-    { label: 'RACE', path: '/race' },
-    // { label: 'MEMBERS', path: '/members' },
-    { label: 'SUPPORT', path: '/support' },
-    { label: 'CONTACT', path: '/contact' },
+  const navLinks = [
+    { to: '/', label: 'ホーム' },
+    { to: '/profile', label: 'プロフィール' },
+    { to: '/project', label: 'プロジェクト' },
+    { to: '/race', label: 'レース' },
+    { to: '/equipments', label: '装備' },
+    { to: '/support', label: 'サポート' },
   ];
 
   const socialLinks = [
@@ -95,13 +96,13 @@ const Header: React.FC = () => {
           {/* Desktop menu */}
           <nav className="hidden md:flex items-center">
             <ul className="flex space-x-8">
-              {menuItems.map((item) => {
-                const isActive = location.pathname === item.path || 
-                  (location.pathname === '/' && item.path === '/');
+              {navLinks.map((item) => {
+                const isActive = location.pathname === item.to || 
+                  (location.pathname === '/' && item.to === '/');
                 return (
                   <li key={item.label}>
                     <Link
-                      to={item.path}
+                      to={item.to}
                       className={`text-gray-800 hover:text-primary transition-colors relative ${isActive ? 'font-medium' : ''}`}
                     >
                       {item.label}
@@ -147,13 +148,13 @@ const Header: React.FC = () => {
             </button>
           </div>
           <nav className="flex flex-col items-center justify-center h-full -mt-16">
-            {menuItems.map((item) => {
-              const isActive = location.pathname === item.path || 
-                (location.pathname === '/' && item.path === '/');
+            {navLinks.map((item) => {
+              const isActive = location.pathname === item.to || 
+                (location.pathname === '/' && item.to === '/');
               return (
                 <div key={item.label} className="py-3">
                   <Link
-                    to={item.path}
+                    to={item.to}
                     className={`block text-2xl font-display ${isActive ? 'text-primary font-medium' : 'text-gray-800'} hover:text-primary transition-colors`}
                     onClick={() => setIsOpen(false)}
                   >
