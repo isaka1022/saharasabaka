@@ -214,12 +214,12 @@ const EquipmentsPage: React.FC = () => {
           name: "カメラ",
           brand: "insta360",
           model: "X4",
-          image: "/images/equipments/camera_insta360_x4.jpg",
-          description: "記録用カメラ、予備バッテリー、自撮り棒付き。",
-          link: null,
+          image: "/images/equipments/camera_insta360_x4_main.jpg",
+          description: "記録用カメラ、予備バッテリー、自撮り棒付き。8K 360度撮影対応、防水機能搭載。",
+          link: "https://amzn.to/4iyOhEf",
           status: "未定" as const,
           weight: null,
-          price: null
+          price: 79800
         }
       ]
     },
@@ -229,9 +229,9 @@ const EquipmentsPage: React.FC = () => {
       items: [
         {
           name: "シューズ",
-          brand: "MERREL",
+          brand: "MERRELL",
           model: "AGILITY PEAK 5",
-          image: "/images/equipments/shoes_merrel_agilitypeak5.jpg",
+          image: "/images/equipments/shoes_merrell_agilitypeak5.jpg",
           description: "砂漠の不安定な地形でも安定して走れるトレイルランニングシューズ。",
           link: "https://amzn.to/41PSH43",
           status: "確定" as const,
@@ -240,25 +240,25 @@ const EquipmentsPage: React.FC = () => {
         },
         {
           name: "Tシャツ",
-          brand: "モントレイル",
-          model: "エンドレストレイルランニングテックTシャツ",
+          brand: null,
+          model: null,
           image: "/images/equipments/shirt_montrail_tech.jpg",
           description: "UVカット機能と速乾性を備えた軽量シャツ。",
           link: null,
-          status: "確定" as const,
-          weight: 120,
-          price: 6000
+          status: "未定" as const,
+          weight: null,
+          price: null
         },
         {
           name: "ハーフパンツ",
-          brand: "NIKE",
-          model: "トレイル ショートパンツ",
+          brand: null,
+          model: null,
           image: "/images/equipments/shorts_nike_trail.jpg",
           description: "軽量で動きやすいトレイルランニング用パンツ。",
           link: null,
-          status: "確定" as const,
-          weight: 150,
-          price: 5000
+          status: "未定" as const,
+          weight: null,
+          price: null
         },
         {
           name: "アームカバー",
@@ -344,17 +344,6 @@ const EquipmentsPage: React.FC = () => {
           price: null
         },
         {
-          name: "歯ブラシ",
-          brand: "GLEAVI",
-          model: "刑務所の歯ブラシ",
-          image: "/images/equipments/toothbrush_gleavi.jpg",
-          description: "コンパクトな歯ブラシ。",
-          link: null,
-          status: "確定" as const,
-          weight: null,
-          price: 1250
-        },
-        {
           name: "洗濯洗剤",
           brand: null,
           model: null,
@@ -388,16 +377,16 @@ const EquipmentsPage: React.FC = () => {
       items: [
         {
           name: "トレイルランニングシューズ",
-          brand: "HOKA",
-          model: "Speedgoat 5",
+          brand: null,
+          model: null,
           image: "/images/equipments/shoes_hoka_speedgoat5.jpg",
-          description: "株式会社〇〇様よりご提供いただいた砂漠走行用シューズ。",
-          sponsor: "株式会社〇〇",
-          sponsorLink: "https://example.com",
-          status: "確定" as const,
-          weight: 600,
-          price: 22000,
-          link: null
+          description: "砂漠走行用シューズのスポンサーを募集中です。",
+          sponsor: null,
+          sponsorLink: null,
+          status: "未定" as const,
+          link: null,
+          weight: null,
+          price: null
         },
         {
           name: "サプリメント",
