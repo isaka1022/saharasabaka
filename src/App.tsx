@@ -22,15 +22,17 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
 function App() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/project" element={<ProjectPage />} />
-        <Route path="/race" element={<RacePage />} />
-        <Route path="/equipments" element={<EquipmentsPage />} />
-      </Routes>
-      <Footer />
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/project" element={<ProjectPage />} />
+          <Route path="/race" element={<RacePage />} />
+          <Route path="/equipments" element={<EquipmentsPage />} />
+          <Route path="/support" element={<SupportPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </Layout>
     </Router>
   );
 }

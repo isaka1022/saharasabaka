@@ -49,15 +49,16 @@ const RacePage: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">大会記録</h1>
+      <h1 className="text-4xl font-bold mb-8 text-center">大会実績</h1>
+      
       <div className="grid gap-6">
         {competitions.map((competition, index) => (
-          <div key={index} className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow">
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              <a href={competition.url} target="_blank" rel="noopener noreferrer" className="hover:text-indigo-600 transition-colors">
+          <div key={index} className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              <a href={competition.url} target="_blank" rel="noopener noreferrer" className="hover:text-yellow-600 transition-colors">
                 {competition.name}
               </a>
-            </h2>
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <p className="text-sm text-gray-600">開催日</p>
@@ -69,12 +70,12 @@ const RacePage: React.FC = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-600">総合順位</p>
-                <p className="font-medium text-indigo-600">{competition.result.overall}</p>
+                <p className="font-medium text-yellow-600">{competition.result.overall}</p>
               </div>
               {competition.result.category && (
                 <div>
                   <p className="text-sm text-gray-600">種目別順位</p>
-                  <p className="font-medium text-indigo-600">{competition.result.category}</p>
+                  <p className="font-medium text-yellow-600">{competition.result.category}</p>
                 </div>
               )}
             </div>

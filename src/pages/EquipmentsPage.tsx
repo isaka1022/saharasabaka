@@ -425,7 +425,7 @@ const EquipmentsPage: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8 mt-20">
+    <div className="container mx-auto px-4 py-8">
       <div className="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-8">
         <p className="text-yellow-700">
           <span className="font-bold">※ 装備リスト更新中：</span>
@@ -471,8 +471,8 @@ const EquipmentsPage: React.FC = () => {
       {activeTab === 'bringing' && (
         <>
           {bringingEquipments.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-16">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-yellow-500">{category.title}</h2>
+            <section key={categoryIndex} className="mb-16">
+              <h2 className="text-2xl font-bold mb-6 pb-2 border-b-2 border-yellow-500">{category.title}</h2>
               <p className="text-gray-600 mb-8">{category.description}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
@@ -553,7 +553,7 @@ const EquipmentsPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
           ))}
         </>
       )}
@@ -561,20 +561,22 @@ const EquipmentsPage: React.FC = () => {
       {/* 支援いただいた装備 */}
       {activeTab === 'supported' && (
         <>
-          <div className="bg-yellow-50 p-8 rounded-lg shadow-md max-w-3xl mx-auto mb-16">
-            <h2 className="text-2xl font-bold mb-4 text-center">装備サポートについて</h2>
-            <p className="text-gray-600 mb-4">
-              サハラマラソンの挑戦にあたり、多くの企業様や個人サポーターの方々から装備品のご支援をいただいています。
-              皆様のご支援のおかげで、より安全に、より効率的にレースに挑むことができます。
-            </p>
-            <p className="text-gray-600">
-              この場を借りて、心より感謝申し上げます。
-            </p>
-          </div>
+          <section className="mb-16">
+            <h2 className="text-2xl font-bold mb-6 pb-2 border-b-2 border-yellow-500">装備サポートについて</h2>
+            <div className="bg-white rounded-lg shadow-md p-6 max-w-3xl mx-auto">
+              <p className="text-gray-600 mb-4">
+                サハラマラソンの挑戦にあたり、多くの企業様や個人サポーターの方々から装備品のご支援をいただいています。
+                皆様のご支援のおかげで、より安全に、より効率的にレースに挑むことができます。
+              </p>
+              <p className="text-gray-600">
+                この場を借りて、心より感謝申し上げます。
+              </p>
+            </div>
+          </section>
 
           {supportedEquipments.map((category, categoryIndex) => (
-            <div key={categoryIndex} className="mb-16">
-              <h2 className="text-2xl font-bold mb-4 pb-2 border-b-2 border-yellow-500">{category.title}</h2>
+            <section key={categoryIndex} className="mb-16">
+              <h2 className="text-2xl font-bold mb-6 pb-2 border-b-2 border-yellow-500">{category.title}</h2>
               <p className="text-gray-600 mb-8">{category.description}</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
@@ -649,11 +651,11 @@ const EquipmentsPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </section>
           ))}
 
-          <div className="text-center mt-16">
-            <h3 className="text-xl font-bold mb-6">装備サポートのお問い合わせ</h3>
+          <section className="text-center mt-16">
+            <h3 className="text-2xl font-bold mb-6 pb-2 border-b-2 border-yellow-500">装備サポートのお問い合わせ</h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               サハラマラソンに必要な装備や道具のご提供も引き続き募集しております。
               ご協力いただける方は、下記のお問い合わせフォームよりご連絡ください。
@@ -666,7 +668,7 @@ const EquipmentsPage: React.FC = () => {
             >
               装備サポートに関するお問い合わせ
             </a>
-          </div>
+          </section>
         </>
       )}
     </div>
