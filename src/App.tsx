@@ -10,6 +10,7 @@ import ContactPage from './pages/ContactPage';
 import MembersPage from './pages/MembersPage';
 import RacePage from './pages/RacePage';
 import EquipmentsPage from './pages/EquipmentsPage';
+import Links from './pages/Links';
 
 const Layout = ({ children }: { children: React.ReactNode }) => (
   <div className="min-h-screen bg-white flex flex-col">
@@ -31,6 +32,7 @@ function App() {
           <Route path="/equipments" element={<EquipmentsPage />} />
           <Route path="/support" element={<SupportPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/links" element={<Links />} />
         </Routes>
       </Layout>
     </Router>
