@@ -119,9 +119,14 @@ const Footer: React.FC = () => {
         
         <div className="border-t border-gray-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-sm text-gray-400 mb-4 md:mb-0">
-              Copyright © {yearDisplay} サハラサバカ All Rights Reserved.
-            </p>
+            <div className="flex flex-col items-center md:items-start">
+              <p className="text-xs text-gray-400 mb-2">
+                当サイトの一部のリンクはAmazonアソシエイトのリンクを使用しています。
+              </p>
+              <p className="text-sm text-gray-400 mb-4 md:mb-0">
+                Copyright © {yearDisplay} サハラサバカ All Rights Reserved.
+              </p>
+            </div>
             <div className="flex space-x-6 text-sm text-gray-400">
               <Link to="/privacy" className="hover:text-white transition-colors">プライバシーポリシー</Link>
               <Link to="/terms" className="hover:text-white transition-colors">利用規約</Link>
