@@ -64,8 +64,8 @@ const EquipmentsPage: React.FC = () => {
   // 持って行く装備
   const bringingEquipments: EquipmentCategory[] = [
     {
-      title: "必須装備",
-      description: "サハラマラソンの規定で必ず持参が必要な装備",
+      title: "装備品",
+      description: "サハラマラソンに持って行く装備品",
       items: [
         {
           name: "リュック",
@@ -77,6 +77,17 @@ const EquipmentsPage: React.FC = () => {
           status: "確定" as const,
           weight: 505,
           price: null
+        },
+        {
+          name: 'ウェストバッグ',
+          brand: "Salomon",
+          model: "Trailblazer Belt",
+          image: "/images/equipments/salomon_trailblazer.jpg",
+          description: 'レース中の装備収納用。',
+          link: "https://amzn.to/4btWY0l",
+          status: "仮決定" as const,
+          weight: 100,
+          price: 5000
         },
         {
           name: "ストック",
@@ -112,6 +123,17 @@ const EquipmentsPage: React.FC = () => {
           price: null
         },
         {
+          name: "ソーラーパネル",
+          brand: "BELLOF",
+          model: "JSF025",
+          image: "/images/equipments/solar_panel.jpg",
+          description: "太陽光発電用のソーラーパネル。",
+          link: "https://amzn.to/4iOcLK3",
+          status: "仮決定" as const,
+          weight: 200,
+          price: 9000
+        },
+        {
           name: "バッテリー",
           brand: null,
           model: null,
@@ -123,50 +145,6 @@ const EquipmentsPage: React.FC = () => {
           price: null
         },
         {
-          name: "シュラフ",
-          brand: "モンベル",
-          model: "シームレス ダウンハガー800 #3",
-          image: "/images/equipments/sleepingbag_montbell_downhugger.jpg",
-          description: "夜間の砂漠の寒さから身を守るための超軽量寝袋。",
-          link: "https://webshop.montbell.jp/goods/disp.php?product_id=1121401",
-          status: "確定" as const,
-          weight: 531,
-          price: null
-        },
-        {
-          name: "ダウンジャケット",
-          brand: "ユニクロ",
-          model: "ウルトラライトダウン",
-          image: "/images/equipments/downjacket_uniqlo_ultralight.webp",
-          description: "夜間の保温用の軽量ダウンジャケット。",
-          link: "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/product/ultra-light-down-jacket/",
-          status: "確定" as const,
-          weight: 220,
-          price: 7000
-        },
-        {
-          name: "靴下",
-          brand: null,
-          model: "ドライマックス ライト・トレイル・ラン (1/4Crew)",
-          image: "/images/equipments/socks_drymax_trailrun.webp",
-          description: "速乾性と耐久性を備えたトレイルランニング用靴下。",
-          link: "https://amzn.to/3DAs89F",
-          status: "確定" as const,
-          weight: 34,
-          price: 2400
-        },
-        {
-          name: "枕",
-          brand: "SEA TO SUMMIT",
-          model: "エアロウルトラライトピロー (レギュラー)",
-          image: "/images/equipments/pillow_seatosummit_aero.jpg",
-          description: "超軽量の空気枕。快適な睡眠のために必須。",
-          link: "https://amzn.to/3QSxXSZ",
-          status: "確定" as const,
-          weight: 60,
-          price: 5170
-        },
-        {
           name: "エマージェンシーキット",
           brand: null,
           model: null,
@@ -174,13 +152,13 @@ const EquipmentsPage: React.FC = () => {
           description: "安全ピン、コンパス、シグナルミラー、サバイバルシート、消毒液、ライター、ナイフ、ハサミ、ホイッスル、テーピング等を含む緊急用キット。",
           link: null,
           status: "未定" as const,
-          weight: 300,
-          price: 8000
+          weight: null,
+          price: null
         },
         {
           name: "皮膚保護クリーム",
-          brand: null,
-          model: "プロテクト J1",
+          brand: "プロテクトJ1",
+          model: "45ml",
           image: "/images/equipments/cream_protect_j1.jpg",
           description: "砂漠での皮膚保護用クリーム。",
           link: "https://amzn.to/3FflRRl",
@@ -190,12 +168,12 @@ const EquipmentsPage: React.FC = () => {
         },
         {
           name: "日焼け止め",
-          brand: null,
+          brand: "Aggressive Design",
           model: "Top Athlete Sun Protect Fighter",
           image: "/images/equipments/sunscreen.jpg",
           description: "強い日差しからの保護用日焼け止め。",
           link: "https://amzn.to/4iboodP",
-          status: "確定" as const,
+          status: "仮決定" as const,
           weight: 62,
           price: 4070
         },
@@ -211,123 +189,102 @@ const EquipmentsPage: React.FC = () => {
           price: null
         },
         {
-          name: "カメラ",
-          brand: "insta360",
-          model: "X4",
-          image: "/images/equipments/camera_insta360_x4_main.jpg",
-          description: "記録用カメラ、予備バッテリー、自撮り棒付き。8K 360度撮影対応、防水機能搭載。",
-          link: "https://amzn.to/4iyOhEf",
+          name: "洗濯セット",
+          brand: null,
+          model: null,
+          image: "/images/equipments/detergent_travel.jpg",
+          description: "ウェアの洗濯用洗剤。",
+          link: null,
           status: "未定" as const,
           weight: null,
-          price: 79800
+          price: null
+        },
+        {
+          name: "コンソメ",
+          brand: "味の素",
+          model: "KKコンソメ 固形30個入パウチ",
+          image: "/images/equipments/consomme_stock.jpg",
+          description: "栄養補給用のコンソメ。サハラマラソン必須携行品",
+          link: "https://amzn.to/3XFhC7Z",
+          status: "確定" as const,
+          weight: null,
+          price: 405
+        }
+      ]
+    },
+    
+    {
+      title: "睡眠用品",
+      description: "睡眠に関する装備",
+      items: [
+        {
+          name: "シュラフ",
+          brand: "モンベル",
+          model: "シームレス ダウンハガー800 #3",
+          image: "/images/equipments/sleepingbag_montbell_downhugger.jpg",
+          description: "夜間の砂漠の寒さから身を守るための超軽量寝袋。",
+          link: "https://webshop.montbell.jp/goods/disp.php?product_id=1121401",
+          status: "確定" as const,
+          weight: 531,
+          price: null
+        },
+        {
+          name: "マット",
+          brand: null,
+          model: null,
+          image: "/images/equipments/mat.jpg",
+          description: "寝袋の下に敷くマット",
+          link: null,
+          status: "未定" as const,
+          weight: 50,
+          price: null
+        },
+        {
+          name: "耳栓",
+          brand: "MOLDEX",
+          model: "耳栓",
+          image: "/images/equipments/ear_peaces.jpg",
+          description: "睡眠時用の耳栓",
+          link: "https://amzn.to/4kV5FF4",
+          status: "仮決定" as const,
+          weight: 10,
+          price: null
+        },
+        {
+          name: "枕",
+          brand: "SEA TO SUMMIT",
+          model: "エアロウルトラライトピロー (レギュラー)",
+          image: "/images/equipments/pillow_seatosummit_aero.jpg",
+          description: "超軽量の空気枕。快適な睡眠のために必須。",
+          link: "https://amzn.to/3QSxXSZ",
+          status: "確定" as const,
+          weight: 60,
+          price: 5170
         }
       ]
     },
     {
-      title: "ランニング装備",
-      description: "砂漠での走行に適した特殊なランニング装備",
+      title: "生活用品",
+      description: "生活に関する装備",
       items: [
-        {
-          name: "シューズ",
-          brand: "MERRELL",
-          model: "AGILITY PEAK 5",
-          image: "/images/equipments/shoes_merrell_agilitypeak5.jpg",
-          description: "砂漠の不安定な地形でも安定して走れるトレイルランニングシューズ。",
-          link: "https://amzn.to/41PSH43",
-          status: "確定" as const,
-          weight: null,
-          price: 19800
-        },
-        {
-          name: "Tシャツ",
-          brand: null,
-          model: null,
-          image: "/images/equipments/shirt_montrail_tech.jpg",
-          description: "UVカット機能と速乾性を備えた軽量シャツ。",
-          link: null,
-          status: "未定" as const,
-          weight: null,
-          price: null
-        },
-        {
-          name: "ハーフパンツ",
-          brand: null,
-          model: null,
-          image: "/images/equipments/shorts_nike_trail.jpg",
-          description: "軽量で動きやすいトレイルランニング用パンツ。",
-          link: null,
-          status: "未定" as const,
-          weight: null,
-          price: null
-        },
-        {
-          name: "アームカバー",
-          brand: "コロンビア",
-          model: "フリーザーゼロ",
-          image: "/images/equipments/armcover_columbia_freezer.jpg",
-          description: "日焼け対策と体温調整用のアームカバー。",
-          link: null,
-          status: "仮決定" as const,
-          weight: 60,
-          price: 3000
-        },
-        {
-          name: "タイツ",
-          brand: "ドン・キホーテ",
-          model: null,
-          image: "/images/equipments/tights_donki.jpg",
-          description: "夜間の保温用タイツ。",
-          link: null,
-          status: "仮決定" as const,
-          weight: 180,
-          price: 2000
-        },
-        {
-          name: "下着（上）",
-          brand: "finetrack",
-          model: "ドライレイヤークールノースリーブ",
-          image: "/images/equipments/underwear_top_finetrack.jpg",
-          description: "速乾性の高い機能性アンダーウェア。",
-          link: null,
-          status: "確定" as const,
-          weight: 80,
-          price: 4000
-        },
-        {
-          name: "下着（下）",
-          brand: "finetrack",
-          model: "ドライレイヤークールボクサー",
-          image: "/images/equipments/underwear_bottom_finetrack.jpg",
-          description: "速乾性の高い機能性アンダーウェア。",
-          link: null,
-          status: "確定" as const,
-          weight: 70,
-          price: 3500
-        },
         {
           name: "歯ブラシ",
           brand: "GLEAVI",
           model: "刑務所の歯ブラシ",
           image: "/images/equipments/toothbrush_gleavi.jpg",
           description: "コンパクトな歯ブラシ。",
-          link: null,
+          link: "https://amzn.to/4kOtmPr",
           status: "確定" as const,
           weight: null,
           price: 1250
-        }
-      ]
-    },
-    {
-      title: "食料と水",
-      description: "7日間のレースを支える栄養補給",
-      items: [
+        },
         {
           name: "ソルトタブレット",
           brand: "Soorb",
           model: "TOOTH TABLET",
           image: "/images/equipments/salt_tablets.jpg",
           description: "電解質補給用のソルトタブレット。",
-          link: null,
+          link: "https://amzn.to/3RamvSL",
           status: "確定" as const,
           weight: null,
           price: 1980
@@ -354,74 +311,187 @@ const EquipmentsPage: React.FC = () => {
           weight: 50,
           price: 500
         },
+      ]
+    },
+    {
+      title: "服装",
+      description: "レース中の服装",
+      items: [
         {
-          name: "コンソメ",
-          brand: "味の素",
-          model: "KKコンソメ 固形30個入パウチ",
-          image: "/images/equipments/consomme_stock.jpg",
-          description: "栄養補給用のコンソメ。",
-          link: "https://amzn.to/3XFhC7Z",
+          name: "Tシャツ",
+          brand: null,
+          model: null,
+          image: "/images/equipments/shirt_montrail_tech.jpg",
+          description: "UVカット機能と速乾性を備えた軽量シャツ。",
+          link: null,
           status: "未定" as const,
           weight: null,
-          price: 405
-        }
+          price: null
+        },
+        {
+          name: "アームカバー",
+          brand: null,  
+          model: null,
+          image: "/images/equipments/armcover_columbia_freezer.jpg",
+          description: "日焼け対策と体温調整用のアームカバー。冷却機能付き",
+          link: null,
+          status: "未定" as const,
+          weight: 60,
+          price: 3000
+        },
+        {
+          name: "インナー",
+          brand: null,
+          model: null,
+          image: "/images/equipments/underwear_top_finetrack.jpg",
+          description: "速乾性の高い機能性アンダーウェア。",
+          link: null,
+          status: "未定" as const,
+          weight: null,
+          price: null
+        },
+        {
+          name: "ハーフパンツ",
+          brand: null,
+          model: null,
+          image: "/images/equipments/shorts_nike_trail.jpg",
+          description: "軽量で動きやすいトレイルランニング用パンツ。",
+          link: null,
+          status: "未定" as const,
+          weight: null,
+          price: null
+        },
+        {
+          name: "レギンス",
+          brand: null,
+          model: null,
+          image: "/images/equipments/tights_donki.jpg",
+          description: "レースのレギンス。",
+          link: null,
+          status: "未定" as const,
+          weight: null,
+          price: null
+        },
+        {
+          name: "靴下",
+          brand: null,
+          model: "ドライマックス ライト・トレイル・ラン (1/4Crew)",
+          image: "/images/equipments/socks_drymax_trailrun.webp",
+          description: "速乾性と耐久性を備えたトレイルランニング用靴下。",
+          link: "https://amzn.to/3DAs89F",
+          status: "確定" as const,
+          weight: 34,
+          price: 2400
+        },
+        {
+          name: "シューズ",
+          brand: "MERRELL",
+          model: "AGILITY PEAK 5",
+          image: "/images/equipments/shoes_merrell_agilitypeak5.jpg",
+          description: "砂漠の不安定な地形でも安定して走れるトレイルランニングシューズ。",
+          link: "https://amzn.to/41PSH43",
+          status: "確定" as const,
+          weight: null,
+          price: 19800
+        },
+        {
+          name: "靴紐",
+          brand: "NATHAN",
+          model: "NS1170",
+          image: "/images/equipments/shoe_races.jpg",
+          description: "結ばない靴紐",
+          link: "https://amzn.to/4iuntVQ",
+          status: "仮決定" as const,
+          weight: null,
+          price: 1000,
+        },
+        {
+          name: "ダウンジャケット",
+          brand: "ユニクロ",
+          model: "ウルトラライトダウン",
+          image: "/images/equipments/downjacket_uniqlo_ultralight.webp",
+          description: "夜間の保温用の軽量ダウンジャケット。",
+          link: "https://www.uniqlo.com/jp/ja/contents/feature/masterpiece/product/ultra-light-down-jacket/",
+          status: "確定" as const,
+          weight: 220,
+          price: 7000
+        },
       ]
-    }
+    },
+    {
+      title: "食料と水",
+      description: "7日間のレースを支える栄養補給",
+      items: [
+        
+        
+      ]
+    },
+    {
+      title: "撮影機材",
+      description: "撮影に関する装備",
+      items: [
+        {
+          name: "カメラ",
+          brand: "insta360",
+          model: "X4",
+          image: "/images/equipments/camera_insta360_x4_main.jpg",
+          description: "記録用カメラ、予備バッテリー、自撮り棒付き。8K 360度撮影対応、防水機能搭載。",
+          link: "https://amzn.to/4iyOhEf",
+          status: "確定" as const,
+          weight: null,
+          price: 79800
+        },
+      ]
+    },
   ];
 
   // 支援いただいた装備
   const supportedEquipments: SponsoredEquipmentCategory[] = [
     {
-      title: "スポンサー提供装備",
-      description: "企業・団体様からご支援いただいた装備品",
+      title: "支援品",
+      description: "応援のために差し入れいただいた支援品",
       items: [
         {
-          name: "トレイルランニングシューズ",
+          name: "ギー",
           brand: null,
           model: null,
-          image: "/images/equipments/shoes_hoka_speedgoat5.jpg",
-          description: "砂漠走行用シューズのスポンサーを募集中です。",
-          sponsor: null,
+          image: "/images/equipments/pouch_waterproof.jpg",
+          description: "栄養補給の品として",
+          sponsor: "やまざき たかまさ",
           sponsorLink: null,
           status: "未定" as const,
-          link: null,
+          link: "https://amzn.to/3DLgN72",
           weight: null,
           price: null
         },
         {
-          name: "サプリメント",
+          name: "シャンプー",
           brand: null,
           model: null,
-          image: "/images/equipments/supplements_endurance.jpg",
-          description: "長時間運動用サプリメントのスポンサーを募集中です。",
-          sponsor: null,
+          image: "/images/equipments/shampoo_nonshampoo.jpg",
+          description: "洗わないシャンプー",
+          sponsor: "K.I.",
           sponsorLink: null,
           status: "未定" as const,
-          link: null,
+          link: "https://amzn.to/3DFW9VR",
+          weight: null,
+          price: null
+        },
+        {
+          name: "カレーライスセット",
+          brand: null,
+          model: null,
+          image: "/images/equipments/curry_rice_set.jpg",
+          description: "カレーライスセット",
+          sponsor: "K.I.",
+          sponsorLink: null,
+          status: "未定" as const,
+          link: "https://amzn.to/3DFW9VR",
           weight: null,
           price: null
         }
       ]
     },
-    {
-      title: "個人サポーター提供装備",
-      description: "個人サポーターの方々からご支援いただいた装備品",
-      items: [
-        {
-          name: "防水ポーチ",
-          brand: null,
-          model: null,
-          image: "/images/equipments/pouch_waterproof.jpg",
-          description: "貴重品保管用防水ポーチのサポーターを募集中です。",
-          sponsor: null,
-          sponsorLink: null,
-          status: "未定" as const,
-          link: null,
-          weight: null,
-          price: null
-        }
-      ]
-    }
   ];
 
   return (
@@ -441,28 +511,28 @@ const EquipmentsPage: React.FC = () => {
 
       {/* タブ切り替え */}
       <div className="flex justify-center mb-12">
-        <div className="inline-flex rounded-md shadow-sm" role="group">
+        <div className="inline-flex rounded-lg shadow-lg overflow-hidden" role="group">
           <button
             type="button"
-            className={`px-6 py-3 text-lg font-medium rounded-l-lg ${
+            className={`px-8 py-4 text-lg font-medium transition-all duration-300 ${
               activeTab === 'bringing'
-                ? 'bg-yellow-500 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+                ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-white shadow-inner'
+                : 'bg-white text-gray-700 hover:bg-gray-50'
             }`}
             onClick={() => setActiveTab('bringing')}
           >
-            持って行く装備
+            本番装備品一覧
           </button>
           <button
             type="button"
-            className={`px-6 py-3 text-lg font-medium rounded-r-lg ${
+            className={`px-8 py-4 text-lg font-medium transition-all duration-300 ${
               activeTab === 'supported'
-                ? 'bg-yellow-500 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+                ? 'bg-gradient-to-r from-yellow-400 to-yellow-500 text-white shadow-inner'
+                : 'bg-white text-gray-700 hover:bg-gray-50'
             }`}
             onClick={() => setActiveTab('supported')}
           >
-            支援いただいた装備
+            支援品
           </button>
         </div>
       </div>
@@ -633,7 +703,7 @@ const EquipmentsPage: React.FC = () => {
                         {item.brand && item.model ? (
                           <p className="text-xs sm:text-sm text-gray-500 mb-2">{item.brand} {item.model}</p>
                         ) : (
-                          <p className="text-xs sm:text-sm text-gray-500 mb-2">メーカー・モデル未定</p>
+                          <p className="text-xs sm:text-sm text-gray-500 mb-2">メーカー・モデル不明</p>
                         )}
                         <p className="text-sm sm:text-base text-gray-600 mb-2">{item.description}</p>
                         {item.sponsor ? (
@@ -675,4 +745,4 @@ const EquipmentsPage: React.FC = () => {
   );
 };
 
-export default EquipmentsPage; 
+export default EquipmentsPage;
