@@ -59,7 +59,8 @@ const calculateTotalCategoryPrice = (categories: EquipmentCategory[]): number =>
 };
 
 const EquipmentsPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'bringing' | 'supported'>('bringing');
+  // タブ切り替えのstateは一時的に不要
+  // const [activeTab, setActiveTab] = useState<'bringing' | 'supported'>('bringing');
 
   // 持って行く装備
   const bringingEquipments: EquipmentCategory[] = [
@@ -509,7 +510,7 @@ const EquipmentsPage: React.FC = () => {
         極限の環境で生き抜くための装備選びは、レース完走の鍵となります。
       </p>
 
-      {/* タブ切り替え */}
+      {/* タブ切り替えを一時的に削除
       <div className="flex justify-center mb-12">
         <div className="inline-flex rounded-lg shadow-lg overflow-hidden" role="group">
           <button
@@ -536,99 +537,96 @@ const EquipmentsPage: React.FC = () => {
           </button>
         </div>
       </div>
+      */}
 
-      {/* 持って行く装備 */}
-      {activeTab === 'bringing' && (
-        <>
-          {bringingEquipments.map((category, categoryIndex) => (
-            <section key={categoryIndex} className="mb-16">
-              <h2 className="text-2xl font-bold mb-6 pb-2 border-b-2 border-yellow-500">{category.title}</h2>
-              <p className="text-gray-600 mb-8">{category.description}</p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-                {category.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
-                    {item.link && (
-                      <a 
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="absolute inset-0 z-10"
-                        aria-label={`${item.name}の詳細を見る`}
+      {/* 持って行く装備を常に表示 */}
+      {bringingEquipments.map((category, categoryIndex) => (
+        <section key={categoryIndex} className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 pb-2 border-b-2 border-yellow-500">{category.title}</h2>
+          <p className="text-gray-600 mb-8">{category.description}</p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+            {category.items.map((item, itemIndex) => (
+              <div key={itemIndex} className="group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
+                {item.link && (
+                  <a 
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute inset-0 z-10"
+                    aria-label={`${item.name}の詳細を見る`}
+                  />
+                )}
+                <div className="flex flex-row items-start p-4 sm:p-6">
+                  <div className="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 relative bg-gray-50 rounded-lg overflow-hidden">
+                    {item.image ? (
+                      <img 
+                        src={item.image} 
+                        alt={item.name} 
+                        className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                          target.parentElement?.querySelector('.fallback-image')?.classList.remove('hidden');
+                        }}
                       />
-                    )}
-                    <div className="flex flex-row items-start p-4 sm:p-6">
-                      <div className="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 relative bg-gray-50 rounded-lg overflow-hidden">
-                        {item.image ? (
-                          <img 
-                            src={item.image} 
-                            alt={item.name} 
-                            className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.style.display = 'none';
-                              target.parentElement?.querySelector('.fallback-image')?.classList.remove('hidden');
-                            }}
-                          />
-                        ) : (
-                          <div className="w-full h-full flex items-center justify-center">
-                            <div className="text-gray-400 text-center">
-                              <svg className="w-8 h-8 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                              </svg>
-                              <p className="font-medium text-xs">NO IMAGE</p>
-                            </div>
-                          </div>
-                        )}
-                        <div className="fallback-image hidden w-full h-full flex items-center justify-center">
-                          <div className="text-gray-400 text-center">
-                            <svg className="w-8 h-8 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <p className="font-medium text-xs">NO IMAGE</p>
-                          </div>
-                        </div>
-                        <div className={`absolute top-0 right-0 px-2 py-1 text-xs font-medium text-white ${
-                          getStatusColor(item.status)
-                        }`}>
-                          {item.status}
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="text-gray-400 text-center">
+                          <svg className="w-8 h-8 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                          </svg>
+                          <p className="font-medium text-xs">NO IMAGE</p>
                         </div>
                       </div>
-                      <div className="flex-grow ml-4 sm:ml-6">
-                        <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-yellow-600 transition-colors">{item.name}</h3>
-                        {item.brand && item.model ? (
-                          <p className="text-xs sm:text-sm text-gray-500 mb-2">{item.brand} {item.model}</p>
-                        ) : (
-                          <p className="text-xs sm:text-sm text-gray-500 mb-2">メーカー・モデル検討中</p>
-                        )}
-                        <p className="text-sm sm:text-base text-gray-600 mb-2">{item.description}</p>
-                        <div className="flex flex-col space-y-1 text-xs sm:text-sm text-gray-500">
-                          {item.weight && (
-                            <p>重さ: {item.weight}g</p>
-                          )}
-                          {item.price && (
-                            <p>参考価格: ¥{item.price.toLocaleString()}</p>
-                          )}
-                        </div>
-                        {item.link && (
-                          <div className="mt-2 inline-flex items-center text-yellow-600 group-hover:text-yellow-700 font-medium">
-                            詳細を見る
-                            <svg className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                            </svg>
-                          </div>
-                        )}
+                    )}
+                    <div className="fallback-image hidden w-full h-full flex items-center justify-center">
+                      <div className="text-gray-400 text-center">
+                        <svg className="w-8 h-8 mx-auto mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <p className="font-medium text-xs">NO IMAGE</p>
                       </div>
                     </div>
+                    <div className={`absolute top-0 right-0 px-2 py-1 text-xs font-medium text-white ${
+                      getStatusColor(item.status)
+                    }`}>
+                      {item.status}
+                    </div>
                   </div>
-                ))}
+                  <div className="flex-grow ml-4 sm:ml-6">
+                    <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-yellow-600 transition-colors">{item.name}</h3>
+                    {item.brand && item.model ? (
+                      <p className="text-xs sm:text-sm text-gray-500 mb-2">{item.brand} {item.model}</p>
+                    ) : (
+                      <p className="text-xs sm:text-sm text-gray-500 mb-2">メーカー・モデル検討中</p>
+                    )}
+                    <p className="text-sm sm:text-base text-gray-600 mb-2">{item.description}</p>
+                    <div className="flex flex-col space-y-1 text-xs sm:text-sm text-gray-500">
+                      {item.weight && (
+                        <p>重さ: {item.weight}g</p>
+                      )}
+                      {item.price && (
+                        <p>参考価格: ¥{item.price.toLocaleString()}</p>
+                      )}
+                    </div>
+                    {item.link && (
+                      <div className="mt-2 inline-flex items-center text-yellow-600 group-hover:text-yellow-700 font-medium">
+                        詳細を見る
+                        <svg className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
-            </section>
-          ))}
-        </>
-      )}
+            ))}
+          </div>
+        </section>
+      ))}
 
-      {/* 支援いただいた装備 */}
+      {/* 支援品関連のコードを一時的にコメントアウト
       {activeTab === 'supported' && (
         <>
           <section className="mb-16">
@@ -741,6 +739,7 @@ const EquipmentsPage: React.FC = () => {
           </section>
         </>
       )}
+      */}
     </div>
   );
 };
