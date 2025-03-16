@@ -249,12 +249,19 @@ const Supporters: React.FC = () => {
 
         {/* 個人スポンサーセクション */}
         <div className="mb-32">
-          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">個人スポンサー</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">個人スポンサー・後援</h3>
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-lg shadow-md p-6">
-              <div className="flex flex-wrap justify-center gap-4">
+              <h4 className="text-lg font-bold text-center mb-4 text-gray-700">個人スポンサー</h4>
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <div className="bg-yellow-50 rounded-full px-6 py-2 text-yellow-800 font-medium hover:bg-yellow-100 transition-colors">
                   naopr
+                </div>
+              </div>
+              <h4 className="text-lg font-bold text-center mb-4 text-gray-700">後援</h4>
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="bg-blue-50 rounded-full px-6 py-2 text-blue-800 font-medium hover:bg-blue-100 transition-colors">
+                  はやし会
                 </div>
               </div>
             </div>
