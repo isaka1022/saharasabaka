@@ -178,23 +178,13 @@ const EquipmentsPage: React.FC = () => {
           weight: 62,
           price: 4070
         },
+        
         {
-          name: "カトラリー",
+          name: "衛生用品",
           brand: null,
           model: null,
-          image: "/images/equipments/fork.jpg",
-          description: "食事用の軽量カトラリー。",
-          link: null,
-          status: "未定" as const,
-          weight: null,
-          price: null
-        },
-        {
-          name: "洗濯セット",
-          brand: null,
-          model: null,
-          image: "/images/equipments/detergent_travel.jpg",
-          description: "ウェアの洗濯用洗剤。",
+          image: "/images/equipments/mask.jpg",
+          description: "衛生用品",
           link: null,
           status: "未定" as const,
           weight: null,
@@ -302,22 +292,66 @@ const EquipmentsPage: React.FC = () => {
           price: null
         },
         {
-          name: "洗濯洗剤",
+          name: "洗濯セット",
           brand: null,
           model: null,
           image: "/images/equipments/detergent_travel.jpg",
           description: "ウェアの洗濯用洗剤。",
           link: null,
           status: "未定" as const,
+          weight: null,
+          price: null
+        },
+        {
+          name: "お風呂用品",
+          brand: null,
+          model: null,
+          image: "/images/equipments/detergent_travel.jpg",
+          description: "体を洗うためのグッズ",
+          link: null,
+          status: "未定" as const,
           weight: 50,
           price: 500
         },
+        {
+          name: "トイレットペーパー",
+          brand: null,
+          model: null,
+          image: "/images/equipments/mask.jpg",
+          description: "マスク",
+          link: null,
+          status: "未定" as const,
+          weight: null,
+          price: null
+        }
       ]
     },
     {
       title: "服装",
       description: "レース中の服装",
       items: [
+        {
+          name: "キャップ",
+          brand: null,
+          model: null,
+          image: "/images/equipments/cap.jpg",
+          description: "キャップ",
+          link: null,
+          status: "未定" as const,
+          weight: null,
+          price: null 
+        },
+        {
+          name: "サングラス",
+          brand: null,
+          model: null,
+          image: "/images/equipments/sunglasses.jpg",
+          description: "サングラス",
+          link: null,
+          status: "未定" as const,
+          weight: null,
+          price: null
+        },
         {
           name: "Tシャツ",
           brand: null,
@@ -417,6 +451,17 @@ const EquipmentsPage: React.FC = () => {
           weight: 220,
           price: 7000
         },
+        {
+          name: "サンダル",
+          brand: null,
+          model: null,
+          image: "/images/equipments/sandals.jpg",
+          description: "サンダル",
+          link: null,
+          status: "未定" as const,
+          weight: null,
+          price: null
+        }
       ]
     },
     {
