@@ -423,8 +423,28 @@ const EquipmentsPage: React.FC = () => {
       title: "食料と水",
       description: "7日間のレースを支える栄養補給",
       items: [
-        
-        
+        {
+          name: "煮込みハンバーグ",
+          brand: "アスザックフーズ",
+          model: null,
+          image: "/images/equipments/food_asuzac.jpg",
+          description: "フリーズドライ食品。タンパク質源として。",
+          link: "https://asuzacfoods.shop/view/item/000000001574",
+          status: "仮決定" as const,
+          weight: null,
+          price: null
+        },
+        {
+          name: "雑炊",
+          brand: "アマノフーズ",
+          model: null,
+          image: "/images/equipments/food_amano_zosui.jpg",
+          description: "フリーズドライの雑炊。",
+          link: "https://amzn.to/4kt0P1P",
+          status: "仮決定" as const,
+          weight: null,
+          price: null
+        }
       ]
     },
     {
