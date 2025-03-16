@@ -280,11 +280,11 @@ const EquipmentsPage: React.FC = () => {
           price: 1250
         },
         {
-          name: "ソルトタブレット",
+          name: "歯磨きタブレット",
           brand: "Soorb",
           model: "TOOTH TABLET",
-          image: "/images/equipments/salt_tablets.jpg",
-          description: "電解質補給用のソルトタブレット。",
+          image: "/images/equipments/tooth_tablet.jpg",
+          description: "歯磨き用のタブレット。",
           link: "https://amzn.to/3RamvSL",
           status: "確定" as const,
           weight: null,
