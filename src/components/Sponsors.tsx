@@ -222,7 +222,7 @@ const Supporters: React.FC = () => {
         {/* スポンサーロゴセクション */}
         <div className="mb-32">
           <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">スポンサー企業</h3>
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-8 items-center max-w-3xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 items-center max-w-3xl mx-auto">
             <div className="w-full flex justify-center items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
               <img
                 src="/images/sponsors/01_mybest.svg"
@@ -234,6 +234,13 @@ const Supporters: React.FC = () => {
               <img
                 src="/images/sponsors/02_yamatojk.svg"
                 alt="ヤマト住建株式会社"
+                className="w-full h-auto max-h-24 object-contain"
+              />
+            </div>
+            <div className="w-full flex justify-center items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+              <img
+                src="/images/sponsors/03_bon.png"
+                alt="ブレインナビオン"
                 className="w-full h-auto max-h-24 object-contain"
               />
             </div>
