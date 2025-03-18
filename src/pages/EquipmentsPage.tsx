@@ -374,6 +374,17 @@ const EquipmentsPage: React.FC = () => {
           price: 3000
         },
         {
+          name: "スマートウォッチ",
+          brand: "SUUNTO",
+          model: "VERTICAL",
+          image: "/images/equipments/suunto_vertical.jpg",
+          description: "GPS、高度計、気圧計、長時間バッテリー搭載のスマートウォッチ。レース中のナビゲーションとデータ記録用。",
+          link: "https://amzn.to/429dJe9",
+          status: "確定" as const,
+          weight: null,
+          price: null
+        },
+        {
           name: "インナー",
           brand: null,
           model: null,
@@ -460,7 +471,8 @@ const EquipmentsPage: React.FC = () => {
           status: "未定" as const,
           weight: null,
           price: null
-        }
+        },
+        
       ]
     },
     {
@@ -517,6 +529,19 @@ const EquipmentsPage: React.FC = () => {
       description: "応援のために差し入れいただいた支援品",
       items: [
         {
+          name: "スマートウォッチ",
+          brand: "SUUNTO",
+          model: "VERTICAL",
+          image: "/images/equipments/suunto_vertical.jpg",
+          description: "GPS、高度計、気圧計、長時間バッテリー搭載のスマートウォッチ。レース中のナビゲーションとデータ記録用。",
+          sponsor: "SUUNTO",
+          sponsorLink: "https://amzn.to/429dJe9",
+          status: "確定" as const,
+          link: "https://amzn.to/429dJe9",
+          weight: null,
+          price: 1298000
+        },
+        {
           name: "ギー",
           brand: null,
           model: null,
@@ -554,7 +579,7 @@ const EquipmentsPage: React.FC = () => {
           link: "https://amzn.to/3DFW9VR",
           weight: null,
           price: null
-        }
+        },
       ]
     },
   ];
@@ -658,6 +683,12 @@ const EquipmentsPage: React.FC = () => {
                       }`}>
                         {item.status}
                       </div>
+                      {/* SUUNTO VERTICALの場合のみ支援品ラベルを表示 */}
+                      {item.name === "スマートウォッチ" && item.brand === "SUUNTO" && item.model === "VERTICAL" && (
+                        <div className="absolute top-0 left-0 px-2 py-1 text-xs font-medium text-white bg-blue-500">
+                          支援品
+                        </div>
+                      )}
                     </div>
                     <div className="flex-grow ml-4 sm:ml-6">
                       <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-yellow-600 transition-colors">{item.name}</h3>
@@ -692,7 +723,6 @@ const EquipmentsPage: React.FC = () => {
         ))
       )}
 
-      {/* 支援品関連のコードを一時的にコメントアウト */}
       {activeTab === 'supported' && (
         <>
           <section className="mb-16">
