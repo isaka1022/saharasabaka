@@ -761,6 +761,9 @@ const EquipmentsPage: React.FC = () => {
                         }`}>
                           {item.status}
                         </div>
+                        <div className="absolute top-0 left-0 px-2 py-1 text-xs font-medium text-white bg-blue-500">
+                          支援品
+                        </div>
                       </div>
                       <div className="flex-grow ml-4 sm:ml-6">
                         <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-yellow-600 transition-colors">{item.name}</h3>
