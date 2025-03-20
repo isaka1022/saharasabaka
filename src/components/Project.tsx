@@ -100,6 +100,260 @@ const Project: React.FC = () => {
             </div>
           </div>
         </div>
+
+        {/* 大会スケジュール */}
+        <div className="bg-white rounded-2xl p-10 shadow-lg mt-12">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold text-gray-800 mb-4">大会スケジュール</h3>
+            <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
+          </div>
+
+          <div className="space-y-8">
+            {/* 4月2-3日 */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">4月2-3日：モロッコ到着</h4>
+              <div className="space-y-4">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h5 className="font-semibold text-blue-800 mb-2">到着オプション</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>オプション1：マラケシュ到着（シャトルバス利用可能）</li>
+                    <li>オプション2：ワルザザート到着（各自でホテルまで移動）</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 4月4日 */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">4月4日：ビバークへの移動</h4>
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">午前</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>7:30集合、8:00出発</li>
+                    <li>集合場所：Karam Palace、Berbère Palace、または空港から選択可能</li>
+                    <li>ロードブック、ランチパック、水の配布</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">移動</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>移動時間：約6時間</li>
+                    <li>途中で休憩あり</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">ビバーク到着後</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>テント割り当て</li>
+                    <li>自給自足生活開始</li>
+                    <li>ウェルカムブリーフィング参加</li>
+                    <li>装備ショップ利用可能</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 4月5日 */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">4月5日：テクニカルチェック</h4>
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">朝</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>自給自足での朝食</li>
+                    <li>5リットルの水の配布</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">テクニカルチェック</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>スタッフがテントに来訪</li>
+                    <li>必須装備のチェック</li>
+                    <li>パスポートと書類確認</li>
+                    <li>バッグの重量チェック（6.5kg〜15kg）</li>
+                    <li>医療証明書とECGの確認</li>
+                    <li>GPSビーコンの受け取り</li>
+                    <li>ゼッケンの受け取り</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">レース説明</h5>
+                  <p className="text-gray-600">
+                    6つのステージに関する説明とレースのアドバイスを含むブリーフィング
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 4月6-12日 */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">4月6-12日：レース期間</h4>
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">チェックポイント（CP）情報</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>約7-12km間隔で設置</li>
+                    <li>給水ポイント</li>
+                    <li>日陰での休憩エリア</li>
+                    <li>医療支援</li>
+                    <li>首元用の氷水サービス（医療チーム提供）</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">給水について</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>最低必要容量：1.5リットル</li>
+                    <li>CPでは2リットルの水筒で給水可能</li>
+                    <li>ステージ終了時に5リットルの水を支給</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 4月12-14日 */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">4月12-14日：レース終了後</h4>
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">4月12日</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>ワルザザートへの移動（約6時間）</li>
+                    <li>ホテルチェックイン</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">4月13日</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>フィニッシャーTシャツの配布</li>
+                    <li>MDSストアでの買い物</li>
+                    <li>表彰式とガラディナー</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">4月14日</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>マラケシュへの移動（約4時間）</li>
+                    <li>空港または市内中心部での下車</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 重要な準備情報 */}
+        <div className="bg-white rounded-2xl p-10 shadow-lg mt-12">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold text-gray-800 mb-4">重要な準備情報</h3>
+            <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
+          </div>
+
+          <div className="space-y-8">
+            {/* 手荷物に関する注意 */}
+            <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-red-700 mb-3">⚠️ 重要な注意</h4>
+              <p className="text-gray-700">
+                レース用の装備は預け入れ荷物に入れないでください。毎年、航空会社が荷物を紛失するケースがあります。
+                トラブルを避けるため、シューズ、バックパック、食料、ウェアなどのレースに必要な装備は必ず機内持ち込み荷物に入れてください。
+                ただし、ポール（ストック）は通常機内持ち込みが許可されていないため、事前に航空会社に確認することをお勧めします。
+              </p>
+            </div>
+
+            {/* モロッコ入国について */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">モロッコ入国について</h4>
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">必要書類</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>滞在期間中有効なパスポート</li>
+                    <li>EU、イギリス、スイス、カナダ、アメリカなどの国籍保持者はビザ不要</li>
+                    <li>出発前に自国のモロッコ入国要件を確認することを推奨</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">健康面</h5>
+                  <ul className="list-disc list-inside text-gray-600">
+                    <li>特別な予防接種は不要</li>
+                    <li>出発前に自国の健康規制を確認することを推奨</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* ビバーク（キャンプ）生活 */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">ビバーク（キャンプ）生活について</h4>
+              <div className="space-y-4">
+                <p className="text-gray-600">
+                  滞在中は伝説的なMDSビバークで過ごします。8人用のベルベルテントで他の参加者と共同生活を送ります。
+                  テントが満員でない場合、主催者側で再配置が行われる可能性があります。
+                </p>
+                <div className="bg-yellow-50 p-4 rounded-lg">
+                  <h5 className="font-semibold text-yellow-800 mb-2">自給自足について</h5>
+                  <p className="text-gray-600">
+                    食料は自己調達が基本となります。最初の5リットルの水は主催者から支給され、飲料用と調理用に使用できます。
+                    ステージ開始前の数日間はカロリー制限はありませんので、自由に食事を管理できます。
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* 重要な装備情報 */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">重要な装備情報</h4>
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">コンソメについて</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>14個のコンソメキューブは必須装備の一部です</li>
+                    <li>推奨使用量：1日2個以上</li>
+                    <li>使用方法：
+                      <ul className="list-disc list-inside ml-4">
+                        <li>夜：お湯で溶かしてスープとして（2個を大きめのカップ1杯の水で）</li>
+                        <li>日中：水筒に入れて（2個を500mlの水で）</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">医療・健康面の注意</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>自己投薬には十分注意が必要</li>
+                    <li>イブプロフェンやケトプロフェンなどの非ステロイド性抗炎症薬（NSAIDs）は避ける</li>
+                    <li>痛み止めが必要な場合は、パラセタモールやドリプランを推奨</li>
+                  </ul>
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-700 mb-2">その他の注意点</h5>
+                  <ul className="list-disc list-inside text-gray-600 space-y-2">
+                    <li>靴擦れ防止にコンピードを予防的に使用しない</li>
+                    <li>摩擦が起こりやすい部分の除毛は避ける</li>
+                    <li>装備は可能な限り軽量化を心がける</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* トイレ情報 */}
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-gray-800 mb-4">トイレについて</h4>
+              <div className="space-y-4">
+                <p className="text-gray-600">
+                  ビバークには遊牧民式トイレが設置されます：
+                </p>
+                <ul className="list-disc list-inside text-gray-600 space-y-2">
+                  <li>テント式</li>
+                  <li>穴付きの便座</li>
+                  <li>生分解性コーン粒袋を使用</li>
+                  <li>男女別のトイレが用意され、チェックポイントにも設置</li>
+                  <li>トイレットペーパーやウェットティッシュは各自で用意が必要</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
