@@ -132,7 +132,7 @@ const MainVisual: React.FC = () => {
             プロジェクトについて
           </Link>
           <Link 
-            to="https://docs.google.com/forms/d/e/1FAIpQLSf6NUloIZWpsoxhZCU7_R3mDDTmwl5fdsMXFhEzHLvbRosALg/viewform" 
+            to="/support" 
             className="btn-outline text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transform transition-transform hover:scale-105 w-full sm:w-auto text-center"
           >
             応援する
