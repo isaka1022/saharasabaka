@@ -53,38 +53,6 @@ const Project: React.FC = () => {
               />
             </div>
             
-            {/* ステージ情報 */}
-            <div className="bg-gray-50 rounded-xl p-6 mt-8">
-              <h4 className="text-xl font-semibold text-gray-800 mb-4">2024年 ステージ構成</h4>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="font-bold text-orange-500">Stage 1</div>
-                  <div className="text-lg">31.1 km</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="font-bold text-orange-500">Stage 2</div>
-                  <div className="text-lg">40.8 km</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="font-bold text-orange-500">Stage 3</div>
-                  <div className="text-lg">85.3 km</div>
-                  <div className="text-sm text-gray-500">48時間制限</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="font-bold text-orange-500">Stage 4</div>
-                  <div className="text-lg">43.1 km</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="font-bold text-orange-500">Stage 5</div>
-                  <div className="text-lg">31.4 km</div>
-                </div>
-                <div className="bg-white p-4 rounded-lg shadow-sm">
-                  <div className="font-bold text-orange-500">Stage 6</div>
-                  <div className="text-lg">21.1 km</div>
-                </div>
-              </div>
-            </div>
-
             <div className="mt-10 text-center">
               <a
                 href="https://www.marathondessables.com/mds-legendary"
@@ -104,7 +72,7 @@ const Project: React.FC = () => {
         {/* 大会スケジュール */}
         <div className="bg-white rounded-2xl p-10 shadow-lg mt-12">
           <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">大会スケジュール</h3>
+            <h3 className="text-3xl font-bold text-gray-800 mb-4">2025年大会スケジュール</h3>
             <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
           </div>
 
@@ -132,7 +100,7 @@ const Project: React.FC = () => {
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>7:30集合、8:00出発</li>
                     <li>集合場所：Karam Palace、Berbère Palace、または空港から選択可能</li>
-                    <li>ロードブック、ランチパック、水の配布</li>
+                    <li>ロードブック、ランチ、水の配布</li>
                   </ul>
                 </div>
                 <div>
@@ -148,7 +116,6 @@ const Project: React.FC = () => {
                     <li>テント割り当て</li>
                     <li>自給自足生活開始</li>
                     <li>ウェルカムブリーフィング参加</li>
-                    <li>装備ショップ利用可能</li>
                   </ul>
                 </div>
               </div>
@@ -197,7 +164,7 @@ const Project: React.FC = () => {
                     <li>給水ポイント</li>
                     <li>日陰での休憩エリア</li>
                     <li>医療支援</li>
-                    <li>首元用の氷水サービス（医療チーム提供）</li>
+                    <li>今年から首元にの氷水をかけられる（医療チーム提供）</li>
                   </ul>
                 </div>
                 <div>
@@ -250,37 +217,6 @@ const Project: React.FC = () => {
           </div>
 
           <div className="space-y-8">
-            {/* 手荷物に関する注意 */}
-            <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-red-700 mb-3">⚠️ 重要な注意</h4>
-              <p className="text-gray-700">
-                レース用の装備は預け入れ荷物に入れないでください。毎年、航空会社が荷物を紛失するケースがあります。
-                トラブルを避けるため、シューズ、バックパック、食料、ウェアなどのレースに必要な装備は必ず機内持ち込み荷物に入れてください。
-                ただし、ポール（ストック）は通常機内持ち込みが許可されていないため、事前に航空会社に確認することをお勧めします。
-              </p>
-            </div>
-
-            {/* モロッコ入国について */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">モロッコ入国について</h4>
-              <div className="space-y-4">
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">必要書類</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>滞在期間中有効なパスポート</li>
-                    <li>EU、イギリス、スイス、カナダ、アメリカなどの国籍保持者はビザ不要</li>
-                    <li>出発前に自国のモロッコ入国要件を確認することを推奨</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">健康面</h5>
-                  <ul className="list-disc list-inside text-gray-600">
-                    <li>特別な予防接種は不要</li>
-                    <li>出発前に自国の健康規制を確認することを推奨</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
 
             {/* ビバーク（キャンプ）生活 */}
             <div className="bg-gray-50 p-6 rounded-lg">
@@ -302,12 +238,12 @@ const Project: React.FC = () => {
 
             {/* 重要な装備情報 */}
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">重要な装備情報</h4>
+              <h4 className="text-xl font-bold text-gray-800 mb-4">注意事項</h4>
               <div className="space-y-4">
                 <div>
                   <h5 className="font-semibold text-gray-700 mb-2">コンソメについて</h5>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>14個のコンソメキューブは必須装備の一部です</li>
+                    <li>14個のコンソメキューブが必須装備</li>
                     <li>推奨使用量：1日2個以上</li>
                     <li>使用方法：
                       <ul className="list-disc list-inside ml-4">
