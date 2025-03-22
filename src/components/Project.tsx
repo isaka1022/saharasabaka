@@ -78,11 +78,16 @@ const Project: React.FC<ProjectProps> = ({ showPreparationInfo = false }) => {
           <div className="text-center mb-10">
             <h3 className="text-3xl font-bold text-gray-800 mb-4">大会情報の確認方法</h3>
             <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
-            その他のリアルタイム情報
-大会期間中のリアルタイム情報の確認方法については、現在調整中です。 詳細が決まり次第、このページでお知らせいたします。
           </div>
 
           <div className="space-y-8">
+            <div className="bg-yellow-50 p-4 rounded-lg">
+              <h5 className="font-semibold text-yellow-800 mb-2">レース中のリアルタイム情報</h5>
+              <p className="text-gray-600">
+                大会期間中のレースの情報の確認方法については、現在確認中です。
+                詳細がわかり次第更新します。
+              </p>
+            </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h4 className="text-xl font-bold text-gray-800 mb-4">公式ソーシャルメディア</h4>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -136,13 +141,7 @@ const Project: React.FC<ProjectProps> = ({ showPreparationInfo = false }) => {
                   </svg>
                   サンドネ（Facebookページ）
                 </a>
-                <div className="bg-yellow-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-yellow-800 mb-2">その他のリアルタイム情報</h5>
-                  <p className="text-gray-600">
-                    大会期間中のリアルタイム情報の確認方法については、現在調整中です。
-                    詳細が決まり次第、このページでお知らせいたします。
-                  </p>
-                </div>
+               
               </div>
             </div>
           </div>
