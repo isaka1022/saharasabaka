@@ -25,10 +25,10 @@ const Profile: React.FC<ProfileProps> = ({ showFullStory = false }) => {
             <h3 className="text-2xl font-bold text-gray-800">井上 周（いのうえ あまね）</h3>
             <div className="text-lg text-gray-600 leading-relaxed">
               <p className="mb-4">
-                ソフトウェアエンジニア
+                1996年生まれのソフトウェアエンジニア。
               </p>
               <p className="mb-4">
-               長距離走未経験から、2025年サハラマラソン完了に向けて挑戦中
+               2024年にランニング未経験から、2025年のサハラマラソン完走に向けて挑戦中。
               </p>
             </div>
           </div>
