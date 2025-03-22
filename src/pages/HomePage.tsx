@@ -10,14 +10,19 @@ const HomePage: React.FC = () => {
   return (
     <main>
       <MainVisual />
-      <Project />
+      <Project showPreparationInfo={false} />
       <section className="py-20 px-4 bg-gray-50">
         <div className="container mx-auto max-w-3xl">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-800">
             <span className="inline-block border-b-4 border-red-500 pb-2">YOUTUBE</span>
           </h2>
-          <div className="mb-4">
-            <YouTubeEmbed videoId="1VmMQglcQaQ" title="最新の活動動画" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <YouTubeEmbed videoId="1VmMQglcQaQ" title="最新の活動動画" />
+            </div>
+            <div>
+              <YouTubeEmbed videoId="o2_XMQqGDQ8" title="サハラ砂漠の活動" />
+            </div>
           </div>
           <div className="text-center">
             <a
@@ -40,7 +45,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
       {/* <InstagramFeed /> */}
-      <Profile />
+      <Profile showFullStory={false} />
       <Supporters />
     </main>
   );

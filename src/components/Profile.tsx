@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Profile: React.FC = () => {
+interface ProfileProps {
+  showFullStory?: boolean;
+}
+
+const Profile: React.FC<ProfileProps> = ({ showFullStory = false }) => {
   return (
     <section className="py-20 px-4 bg-white">
       <div className="container mx-auto max-w-5xl">
@@ -49,30 +53,34 @@ const Profile: React.FC = () => {
               <br />
               初めて耳にするサハラマラソンの体験談、私は少し心惹かれました。
             </p>
-            <p className="mb-6">
-              「3年後くらいに挑戦しよう」と考えていた私に、ある過去参加者が言いました。
-              <br />
-              <span className="font-bold">「今できることを後回しにしたらだめだ。人生に『いつか』という保証はない」</span>と。
-              <br />
-              その瞬間、これは人生の分岐点だと直感しました。サハラを走る人生と、走らない人生。
-              <br />
-              そして、これこそが「夢にも思わない人生」なのではないか、と。
-              <br />
-              <span className="font-bold">僕は、サハラを走る人生を選びました。</span>
-            </p>
-            <p className="mb-6">
-              はじめは無謀であり「バカ」とも思われたこの挑戦。
-              <br />
-              しかし、いろいろな人のご支援のおかげもあり、形になりつつあります。
-              <br />
-              そして今、この挑戦には新たな意味が加わりました。
-              <br />
-              <span className="font-bold">何者でもない私でも、一歩を踏み出すことが大きな結果につながることがある。</span>
-              <br />
-              この挑戦が、誰かの「一歩を踏み出す勇気」になれば。
-              <br />
-              それが、私がサハラを走るもう一つの理由です。
-            </p>
+            {showFullStory && (
+              <>
+                <p className="mb-6">
+                  「3年後くらいに挑戦しよう」と考えていた私に、ある過去参加者が言いました。
+                  <br />
+                  <span className="font-bold">「今できることを後回しにしたらだめだ。人生に『いつか』という保証はない」</span>と。
+                  <br />
+                  その瞬間、これは人生の分岐点だと直感しました。サハラを走る人生と、走らない人生。
+                  <br />
+                  そして、これこそが「夢にも思わない人生」なのではないか、と。
+                  <br />
+                  <span className="font-bold">僕は、サハラを走る人生を選びました。</span>
+                </p>
+                <p className="mb-6">
+                  はじめは無謀であり「バカ」とも思われたこの挑戦。
+                  <br />
+                  しかし、いろいろな人のご支援のおかげもあり、形になりつつあります。
+                  <br />
+                  そして今、この挑戦には新たな意味が加わりました。
+                  <br />
+                  <span className="font-bold">何者でもない私でも、一歩を踏み出すことが大きな結果につながることがある。</span>
+                  <br />
+                  この挑戦が、誰かの「一歩を踏み出す勇気」になれば。
+                  <br />
+                  それが、私がサハラを走るもう一つの理由です。
+                </p>
+              </>
+            )}
           </div>
         </div>
       </div>
