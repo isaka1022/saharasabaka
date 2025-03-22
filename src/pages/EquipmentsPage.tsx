@@ -822,7 +822,7 @@ const EquipmentsPage: React.FC = () => {
           ))}
 
           <section className="text-center mt-16">
-            <h3 className="text-2xl font-bold mb-6 pb-2 border-b-2 border-yellow-500">装備サポートのお問い合わせ</h3>
+            <h3 className="text-2xl font-bold mb-6 pb-2 border-b-2 border-yellow-500">支援品のお問い合わせ</h3>
             <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
               サハラマラソンに必要な装備や道具のご提供も引き続き募集しております。
               ご協力いただける方は、下記のお問い合わせフォームよりご連絡ください。
@@ -833,7 +833,7 @@ const EquipmentsPage: React.FC = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
             >
-              装備サポートに関するお問い合わせ
+              支援品に関するお問い合わせ
             </a>
           </section>
         </>

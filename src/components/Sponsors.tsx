@@ -270,7 +270,7 @@ const Supporters: React.FC = () => {
 
         {/* 物資提供セクション */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">装備サポート</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-700">支援品</h3>
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-lg shadow-md p-8">
               <p className="text-lg text-gray-600 leading-relaxed mb-6 text-center">
@@ -284,7 +284,7 @@ const Supporters: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-8 py-4 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
                 >
-                  装備サポートに関するお問い合わせ
+                  支援品に関するお問い合わせ
                 </a>
               </div>
             </div>
