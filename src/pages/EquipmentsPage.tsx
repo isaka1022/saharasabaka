@@ -85,7 +85,7 @@ const EquipmentsPage: React.FC = () => {
           image: "/images/equipments/salomon_trailblazer.jpg",
           description: 'レース中の装備収納用。',
           link: "https://amzn.to/4btWY0l",
-          status: "仮決定" as const,
+          status: "確定" as const,
           weight: 100,
           price: 5000
         },
@@ -129,29 +129,29 @@ const EquipmentsPage: React.FC = () => {
           image: "/images/equipments/solar_panel.jpg",
           description: "太陽光発電用のソーラーパネル。",
           link: "https://amzn.to/4iOcLK3",
-          status: "仮決定" as const,
+          status: "確定" as const,
           weight: 200,
           price: 9000
         },
         {
           name: "バッテリー",
-          brand: null,
-          model: null,
+          brand: "CIO",
+          model: "モバイルバッテリー PD Type-C 30W 薄型 軽量 [薄さ16mm] 10000mAh",
           image: "/images/equipments/battery.jpg",
-          description: "ヘッドライト用予備バッテリー。",
-          link: null,
-          status: "未定" as const,
+          description: "ヘッドライト用予備バッテリー。3ポート搭載で急速充電対応。",
+          link: "https://amzn.to/42mZ8f9",
+          status: "確定" as const,
           weight: 50,
-          price: null
+          price: 2980
         },
         {
           name: "エマージェンシーキット",
-          brand: null,
+          brand: "ダイソー",
           model: null,
           image: "/images/equipments/emergency_kit.jpg",
           description: "安全ピン、コンパス、シグナルミラー、サバイバルシート、消毒液、ライター、ナイフ、ハサミ、ホイッスル、テーピング等を含む緊急用キット。",
           link: null,
-          status: "未定" as const,
+          status: "確定" as const,
           weight: null,
           price: null
         },
@@ -173,21 +173,9 @@ const EquipmentsPage: React.FC = () => {
           image: "/images/equipments/sunscreen.jpg",
           description: "強い日差しからの保護用日焼け止め。",
           link: "https://amzn.to/4iboodP",
-          status: "仮決定" as const,
+          status: "確定" as const,
           weight: 62,
           price: 4070
-        },
-        
-        {
-          name: "衛生用品",
-          brand: null,
-          model: null,
-          image: "/images/equipments/mask.jpg",
-          description: "衛生用品",
-          link: null,
-          status: "未定" as const,
-          weight: null,
-          price: null
         },
         {
           name: "コンソメ",
@@ -220,12 +208,12 @@ const EquipmentsPage: React.FC = () => {
         },
         {
           name: "マット",
-          brand: null,
-          model: null,
+          brand: "サーマレスト",
+          model: "Z ライトソル",
           image: "/images/equipments/mat.jpg",
           description: "寝袋の下に敷くマット",
-          link: null,
-          status: "未定" as const,
+          link: "https://amzn.to/4j8IWDQ",
+          status: "確定" as const,
           weight: 50,
           price: null
         },
@@ -236,7 +224,7 @@ const EquipmentsPage: React.FC = () => {
           image: "/images/equipments/ear_peaces.jpg",
           description: "睡眠時用の耳栓",
           link: "https://amzn.to/4kV5FF4",
-          status: "仮決定" as const,
+          status: "確定" as const,
           weight: 10,
           price: null
         },
@@ -281,8 +269,8 @@ const EquipmentsPage: React.FC = () => {
         },
         {
           name: "カトラリー",
-          brand: null,
-          model: null,
+          brand: "ダイソー",
+          model: "プラスチックスプーン",
           image: "/images/equipments/fork.jpg",
           description: "食事用の軽量カトラリー。",
           link: null,
@@ -291,24 +279,13 @@ const EquipmentsPage: React.FC = () => {
           price: null
         },
         {
-          name: "洗濯セット",
-          brand: null,
-          model: null,
-          image: "/images/equipments/detergent_travel.jpg",
-          description: "ウェアの洗濯用洗剤。",
-          link: null,
-          status: "未定" as const,
-          weight: null,
-          price: null
-        },
-        {
           name: "お風呂用品",
-          brand: null,
-          model: null,
+          brand: "ビオレ",
+          model: "全身すっきりシート",
           image: "/images/equipments/detergent_travel.jpg",
           description: "体を洗うためのグッズ",
-          link: null,
-          status: "未定" as const,
+          link: "https://amzn.to/41RSf5x",
+          status: "確定" as const,
           weight: 50,
           price: 500
         },
@@ -446,7 +423,7 @@ const EquipmentsPage: React.FC = () => {
           image: "/images/equipments/shoe_races.jpg",
           description: "結ばない靴紐",
           link: "https://amzn.to/4iuntVQ",
-          status: "仮決定" as const,
+          status: "確定" as const,
           weight: null,
           price: 1000,
         },
@@ -486,7 +463,7 @@ const EquipmentsPage: React.FC = () => {
           image: "/images/equipments/food_asuzac.jpg",
           description: "フリーズドライ食品。タンパク質源として。",
           link: "https://asuzacfoods.shop/view/item/000000001574",
-          status: "仮決定" as const,
+          status: "確定" as const,
           weight: null,
           price: null
         },
@@ -497,7 +474,7 @@ const EquipmentsPage: React.FC = () => {
           image: "/images/equipments/food_amano_zosui.jpg",
           description: "フリーズドライの雑炊。",
           link: "https://amzn.to/4kt0P1P",
-          status: "仮決定" as const,
+          status: "確定" as const,
           weight: null,
           price: null
         }
