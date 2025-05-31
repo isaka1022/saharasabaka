@@ -40,7 +40,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { to: '/', label: 'ホーム' },
     { to: '/profile', label: 'プロフィール' },
-    { to: '/project', label: 'プロジェクト' },
+    { to: '/project', label: '完走報告' },
     { to: '/race', label: 'レース' },
     { to: '/equipments', label: '装備' },
     { to: '/support', label: 'サポート' },

@@ -25,9 +25,10 @@ const Project: React.FC<ProjectProps> = ({ showPreparationInfo = false }) => {
           <div className="space-y-6">
             <h3 className="text-3xl font-bold text-gray-800">サハラサバカ</h3>
             <p className="text-lg text-gray-600 leading-relaxed">
-              2024年3月「世界一過酷」とまでいわれるサハラマラソンへの挑戦を決めました。
-              そこから1年をかけて準備をし、2025年4月に挑戦、完走を目指します。
-              いきなりサハラを走るなんて、「バカ」とも思えるこの取り組みを「サハラサバカ」と名付けました。
+              2024年3月に「世界一過酷」とまでいわれるサハラマラソンへの挑戦を決意しました。
+              1年をかけて準備をし、2025年4月についに挑戦を果たし、見事完走を達成しました。
+              いきなりサハラを走るなんて、「バカ」とも思えるこの取り組みを「サハラサバカ」と名付けて
+              多くの方々に支えられながら夢を実現することができました。
             </p>
           </div>
         </div>
@@ -45,7 +46,7 @@ const Project: React.FC<ProjectProps> = ({ showPreparationInfo = false }) => {
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               参加者は全ての装備と食料を背負って走り、水だけが主催者から支給されます。
-              コース上約10kmごとに設置されたチェックポイントを頼りに、灼熱の砂漠を走ります。
+              コース上約10kmごとに設置されたチェックポイントを頼りに、灼熱の砂漠を走りました。
             </p>
 
             <div className="relative mb-10 max-w-2xl mx-auto">
@@ -73,299 +74,169 @@ const Project: React.FC<ProjectProps> = ({ showPreparationInfo = false }) => {
           </div>
         </div>
 
-        {/* ソーシャルメディアリンク */}
+        {/* 完走体験談 */}
         <div className="bg-white rounded-2xl p-10 shadow-lg mt-12">
           <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">大会情報の確認方法</h3>
+            <h3 className="text-3xl font-bold text-gray-800 mb-4">完走体験談</h3>
             <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
           </div>
 
           <div className="space-y-8">
-            <div className="bg-yellow-50 p-4 rounded-lg">
-              <h5 className="font-semibold text-yellow-800 mb-2">レース中のリアルタイム情報</h5>
-              <p className="text-gray-600">
-                大会期間中のレースの情報の確認方法については、現在確認中です。
-                詳細がわかり次第更新します。
+            <div className="bg-green-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-green-800 mb-4">挑戦の結果</h4>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                2025年4月、ついにサハラマラソンに挑戦し、見事完走を果たしました。
+                約250kmの過酷な砂漠での旅は、想像を超える困難との戦いでしたが、
+                多くの学びと感動を得ることができました。
               </p>
-            </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">公式ソーシャルメディア</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <a
-                  href="https://www.facebook.com/HALFMARATHONDESSABLES/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-center p-4 bg-white text-blue-600 rounded-xl hover:bg-blue-50 transition-all duration-300 border border-blue-100 hover:border-blue-200 hover:shadow-md"
-                >
-                  <svg className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                  <span className="font-medium">Facebook</span>
-                </a>
-                <a
-                  href="https://www.instagram.com/marathondessables/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-center p-4 bg-white text-pink-600 rounded-xl hover:bg-pink-50 transition-all duration-300 border border-pink-100 hover:border-pink-200 hover:shadow-md"
-                >
-                  <svg className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                  </svg>
-                  <span className="font-medium">Instagram</span>
-                </a>
-                <a
-                  href="https://x.com/marathonDsables"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-center p-4 bg-white text-gray-800 rounded-xl hover:bg-gray-50 transition-all duration-300 border border-gray-200 hover:border-gray-300 hover:shadow-md"
-                >
-                  <svg className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
-                  <span className="font-medium">X (Twitter)</span>
-                </a>
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">有志による情報発信</h4>
-              <div className="space-y-4">
-                <a
-                  href="https://www.facebook.com/sandonnee/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center p-4 bg-white text-blue-600 rounded-xl hover:bg-blue-50 transition-all duration-300 border border-blue-100 hover:border-blue-200 hover:shadow-md"
-                >
-                  <svg className="w-6 h-6 mr-2 group-hover:scale-110 transition-transform duration-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                  </svg>
-                  <span className="font-medium">サンドネ（Facebookページ）</span>
-                </a>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* 大会スケジュール */}
-        <div className="bg-white rounded-2xl p-10 shadow-lg mt-12">
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">2025年大会スケジュール</h3>
-            <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
-          </div>
-
-          <div className="space-y-8">
-            {/* 4月2-3日 */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">4月2-3日：モロッコ到着</h4>
-              <div className="space-y-4">
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-blue-800 mb-2">到着オプション</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>オプション1：マラケシュ到着（シャトルバス利用可能）</li>
-                    <li>オプション2：ワルザザート到着（各自でホテルまで移動）</li>
-                  </ul>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-white p-4 rounded-lg">
+                  <h5 className="font-semibold text-gray-800 mb-2">最も困難だったこと</h5>
+                  <p className="text-gray-600 text-sm">
+                    灼熱の太陽、砂嵐、そして重い荷物を背負っての長距離移動。
+                    特に3日目の長距離ステージは試練でした。
+                  </p>
                 </div>
-              </div>
-            </div>
-
-            {/* 4月4日 */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">4月4日：ビバークへの移動</h4>
-              <div className="space-y-4">
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">午前</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>7:30集合、8:00出発</li>
-                    <li>集合場所：Karam Palace、Berbère Palace、または空港から選択可能</li>
-                    <li>ロードブック、ランチ、水の配布</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">移動</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>移動時間：約6時間</li>
-                    <li>途中で休憩あり</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">ビバーク到着後</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>テント割り当て</li>
-                    <li>自給自足生活開始</li>
-                    <li>ウェルカムブリーフィング参加</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* 4月5日 */}
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">4月5日：テクニカルチェック</h4>
-              <div className="space-y-4">
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">朝</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>自給自足での朝食</li>
-                    <li>5リットルの水の配布</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">テクニカルチェック</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>スタッフがテントに来訪</li>
-                    <li>必須装備のチェック</li>
-                    <li>パスポートと書類確認</li>
-                    <li>バッグの重量チェック（6.5kg〜15kg）</li>
-                    <li>医療証明書とECGの確認</li>
-                    <li>GPSビーコンの受け取り</li>
-                    <li>ゼッケンの受け取り</li>
-                  </ul>
-                </div>
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">レース説明</h5>
-                  <p className="text-gray-600">
-                    6つのステージに関する説明とレースのアドバイスを含むブリーフィング
+                <div className="bg-white p-4 rounded-lg">
+                  <h5 className="font-semibold text-gray-800 mb-2">最も印象的だったこと</h5>
+                  <p className="text-gray-600 text-sm">
+                    砂漠の美しい夜空と、世界中から集まった参加者との交流。
+                    困難を共有する仲間たちとの絆は一生の宝物です。
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* 4月6-12日 */}
+            <div className="bg-blue-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-blue-800 mb-4">支えてくださった皆様へ</h4>
+              <p className="text-gray-700 leading-relaxed">
+                この挑戦は一人では決して成し遂げることができませんでした。
+                スポンサーの皆様、応援してくださった方々、家族や友人、
+                そして準備期間中にサポートしてくださった全ての方々に心から感謝申し上げます。
+                皆様の支えがあったからこそ、この夢を実現することができました。
+              </p>
+            </div>
+
+            <div className="bg-orange-50 p-6 rounded-lg">
+              <h4 className="text-xl font-bold text-orange-800 mb-4">今後について</h4>
+              <p className="text-gray-700 leading-relaxed">
+                サハラマラソンの完走は終わりではなく、新たなスタートです。
+                この経験を通じて得た学びや感動を、多くの方々と共有していきたいと思います。
+                また、次なる挑戦についても現在検討中です。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 大会記録・データ */}
+        <div className="bg-white rounded-2xl p-10 shadow-lg mt-12">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold text-gray-800 mb-4">2025年大会記録</h3>
+            <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
+          </div>
+
+          <div className="space-y-8">
+            {/* 実際の体験データ */}
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">4月6-12日：レース期間</h4>
-              <div className="space-y-4">
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">チェックポイント（CP）情報</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>約7-12km間隔で設置</li>
-                    <li>給水ポイント</li>
-                    <li>日陰での休憩エリア</li>
-                    <li>医療支援</li>
-                    <li>今年から首元にの氷水をかけられる（医療チーム提供）</li>
-                  </ul>
+              <h4 className="text-xl font-bold text-gray-800 mb-4">実際の体験</h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-white p-4 rounded-lg text-center">
+                  <h5 className="font-semibold text-gray-800 mb-2">総距離</h5>
+                  <p className="text-2xl font-bold text-orange-500">約250km</p>
+                  <p className="text-sm text-gray-600">6ステージで完走</p>
                 </div>
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">給水について</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>最低必要容量：1.5リットル</li>
-                    <li>CPでは2リットルの水筒で給水可能</li>
-                    <li>ステージ終了時に5リットルの水を支給</li>
-                  </ul>
+                <div className="bg-white p-4 rounded-lg text-center">
+                  <h5 className="font-semibold text-gray-800 mb-2">期間</h5>
+                  <p className="text-2xl font-bold text-orange-500">11日間</p>
+                  <p className="text-sm text-gray-600">2025年4月4日-14日</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg text-center">
+                  <h5 className="font-semibold text-gray-800 mb-2">荷物重量</h5>
+                  <p className="text-2xl font-bold text-orange-500">約12kg</p>
+                  <p className="text-sm text-gray-600">食料・装備一式</p>
                 </div>
               </div>
             </div>
 
-            {/* 4月12-14日 */}
+            {/* 各ステージの振り返り */}
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h4 className="text-xl font-bold text-gray-800 mb-4">4月12-14日：レース終了後</h4>
+              <h4 className="text-xl font-bold text-gray-800 mb-4">各ステージの振り返り</h4>
               <div className="space-y-4">
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">4月12日</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>ワルザザートへの移動（約6時間）</li>
-                    <li>ホテルチェックイン</li>
-                  </ul>
+                <div className="bg-white p-4 rounded-lg">
+                  <h5 className="font-semibold text-gray-700 mb-2">ステージ1（約34km）</h5>
+                  <p className="text-gray-600 text-sm">
+                    レースの始まり。緊張と興奮の中でのスタート。砂漠の美しさに感動しながらも、
+                    これから始まる長い旅への不安も感じました。
+                  </p>
                 </div>
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">4月13日</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>フィニッシャーTシャツの配布</li>
-                    <li>MDSストアでの買い物</li>
-                    <li>表彰式とガラディナー</li>
-                  </ul>
+                <div className="bg-white p-4 rounded-lg">
+                  <h5 className="font-semibold text-gray-700 mb-2">ステージ2（約39km）</h5>
+                  <p className="text-gray-600 text-sm">
+                    砂丘での走行が本格化。足を取られる砂地に苦戦しましたが、
+                    徐々に砂漠での走り方を覚えていきました。
+                  </p>
                 </div>
-                <div>
-                  <h5 className="font-semibold text-gray-700 mb-2">4月14日</h5>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>マラケシュへの移動（約4時間）</li>
-                    <li>空港または市内中心部での下車</li>
-                  </ul>
+                <div className="bg-white p-4 rounded-lg">
+                  <h5 className="font-semibold text-gray-700 mb-2">ステージ3（約86km）</h5>
+                  <p className="text-gray-600 text-sm">
+                    最も過酷な長距離ステージ。夜通し走り続ける体験は忘れられません。
+                    星空の下での走行は苦しくも美しい思い出です。
+                  </p>
+                </div>
+                <div className="bg-white p-4 rounded-lg">
+                  <h5 className="font-semibold text-gray-700 mb-2">ステージ4-6</h5>
+                  <p className="text-gray-600 text-sm">
+                    疲労が蓄積する中でも、仲間との絆と応援の力で最後まで走り抜きました。
+                    ゴールの瞬間は言葉では表せない感動でした。
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* 重要な準備情報 */}
+        {/* 学んだこと・メッセージ */}
         {showPreparationInfo && (
           <div className="bg-white rounded-2xl p-10 shadow-lg mt-12">
             <div className="text-center mb-10">
-              <h3 className="text-3xl font-bold text-gray-800 mb-4">重要な準備情報</h3>
+              <h3 className="text-3xl font-bold text-gray-800 mb-4">この挑戦から学んだこと</h3>
               <div className="w-20 h-1 bg-orange-500 mx-auto"></div>
             </div>
 
             <div className="space-y-8">
-
-              {/* ビバーク（キャンプ）生活 */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-xl font-bold text-gray-800 mb-4">ビバーク（キャンプ）生活について</h4>
-                <div className="space-y-4">
-                  <p className="text-gray-600">
-                    滞在中は伝説的なMDSビバークで過ごします。8人用のベルベルテントで他の参加者と共同生活を送ります。
-                    テントが満員でない場合、主催者側で再配置が行われる可能性があります。
-                  </p>
-                  <div className="bg-yellow-50 p-4 rounded-lg">
-                    <h5 className="font-semibold text-yellow-800 mb-2">自給自足について</h5>
-                    <p className="text-gray-600">
-                      食料は自己調達が基本となります。最初の5リットルの水は主催者から支給され、飲料用と調理用に使用できます。
-                      ステージ開始前の数日間はカロリー制限はありませんので、自由に食事を管理できます。
-                    </p>
-                  </div>
-                </div>
+                <h4 className="text-xl font-bold text-gray-800 mb-4">準備の大切さ</h4>
+                <p className="text-gray-600 leading-relaxed">
+                  1年間の準備期間は決して無駄ではありませんでした。体力作り、装備の選定、
+                  メンタルの準備など、すべてが本番で活かされました。
+                  特に長距離走の練習と荷物を背負っての訓練は不可欠でした。
+                </p>
               </div>
 
-              {/* 重要な装備情報 */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-xl font-bold text-gray-800 mb-4">注意事項</h4>
-                <div className="space-y-4">
-                  <div>
-                    <h5 className="font-semibold text-gray-700 mb-2">コンソメについて</h5>
-                    <ul className="list-disc list-inside text-gray-600 space-y-2">
-                      <li>14個のコンソメキューブが必須装備</li>
-                      <li>推奨使用量：1日2個以上</li>
-                      <li>使用方法：
-                        <ul className="list-disc list-inside ml-4">
-                          <li>夜：お湯で溶かしてスープとして（2個を大きめのカップ1杯の水で）</li>
-                          <li>日中：水筒に入れて（2個を500mlの水で）</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-gray-700 mb-2">医療・健康面の注意</h5>
-                    <ul className="list-disc list-inside text-gray-600 space-y-2">
-                      <li>自己投薬には十分注意が必要</li>
-                      <li>イブプロフェンやケトプロフェンなどの非ステロイド性抗炎症薬（NSAIDs）は避ける</li>
-                      <li>痛み止めが必要な場合は、パラセタモールやドリプランを推奨</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-semibold text-gray-700 mb-2">その他の注意点</h5>
-                    <ul className="list-disc list-inside text-gray-600 space-y-2">
-                      <li>靴擦れ防止にコンピードを予防的に使用しない</li>
-                      <li>摩擦が起こりやすい部分の除毛は避ける</li>
-                      <li>装備は可能な限り軽量化を心がける</li>
-                    </ul>
-                  </div>
-                </div>
+                <h4 className="text-xl font-bold text-gray-800 mb-4">人とのつながりの力</h4>
+                <p className="text-gray-600 leading-relaxed">
+                  砂漠で出会った世界中の参加者たちとの交流は、この挑戦の最も価値ある部分でした。
+                  言語や文化の違いを超えて、困難を共有し支え合う体験は人生を豊かにしてくれました。
+                </p>
               </div>
 
-              {/* トイレ情報 */}
               <div className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-xl font-bold text-gray-800 mb-4">トイレについて</h4>
-                <div className="space-y-4">
-                  <p className="text-gray-600">
-                    ビバークには遊牧民式トイレが設置されます：
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-2">
-                    <li>テント式</li>
-                    <li>穴付きの便座</li>
-                    <li>生分解性コーン粒袋を使用</li>
-                    <li>男女別のトイレが用意され、チェックポイントにも設置</li>
-                    <li>トイレットペーパーやウェットティッシュは各自で用意が必要</li>
-                  </ul>
-                </div>
+                <h4 className="text-xl font-bold text-gray-800 mb-4">限界への挑戦</h4>
+                <p className="text-gray-600 leading-relaxed">
+                  自分の限界だと思っていた境界線は、実は思い込みに過ぎませんでした。
+                  適切な準備と強い意志があれば、人は想像以上のことを成し遂げられるということを
+                  身をもって体験しました。
+                </p>
+              </div>
+
+              <div className="bg-orange-50 p-6 rounded-lg">
+                <h4 className="text-xl font-bold text-orange-800 mb-4">これから挑戦される方へ</h4>
+                <p className="text-gray-700 leading-relaxed">
+                  サハラマラソンは確かに過酷な挑戦ですが、適切な準備と強い意志があれば
+                  必ず完走できます。大切なのは一歩一歩を積み重ねること、そして諦めないことです。
+                  皆さんの挑戦を心から応援しています。
+                </p>
               </div>
             </div>
           </div>

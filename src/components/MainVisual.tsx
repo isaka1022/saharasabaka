@@ -1,54 +1,33 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-interface CountdownProps {
-  targetDate: Date;
-}
-
-const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  });
-
-  useEffect(() => {
-    const calculateTimeLeft = () => {
-      const difference = targetDate.getTime() - new Date().getTime();
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60)
-        });
-      }
-    };
-
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
-
-    return () => clearInterval(timer);
-  }, [targetDate]);
-
-  const timeUnits = [
-    { value: timeLeft.days, label: 'DAYS' },
-    { value: timeLeft.hours, label: 'HOURS' },
-    { value: timeLeft.minutes, label: 'MINUTES' },
-    { value: timeLeft.seconds, label: 'SECONDS' }
-  ];
-
+const CompletionInfo: React.FC = () => {
   return (
     <div className="flex gap-4 justify-center text-white">
-      {timeUnits.map((unit, index) => (
-        <div key={unit.label} className="text-center">
-          <div className="bg-black bg-opacity-50 px-4 py-3 rounded-lg backdrop-blur-sm text-2xl md:text-3xl font-bold min-w-[70px]">
-            {unit.value.toString().padStart(2, '0')}
-          </div>
-          <div className="text-sm mt-2 font-medium">{unit.label}</div>
+      <div className="text-center">
+        <div className="bg-green-600 bg-opacity-90 px-4 py-3 rounded-lg backdrop-blur-sm text-2xl md:text-3xl font-bold min-w-[70px]">
+          ✓
         </div>
-      ))}
+        <div className="text-sm mt-2 font-medium">COMPLETED</div>
+      </div>
+      <div className="text-center">
+        <div className="bg-black bg-opacity-50 px-4 py-3 rounded-lg backdrop-blur-sm text-2xl md:text-3xl font-bold min-w-[70px]">
+          250
+        </div>
+        <div className="text-sm mt-2 font-medium">KM</div>
+      </div>
+      <div className="text-center">
+        <div className="bg-black bg-opacity-50 px-4 py-3 rounded-lg backdrop-blur-sm text-2xl md:text-3xl font-bold min-w-[70px]">
+          11
+        </div>
+        <div className="text-sm mt-2 font-medium">DAYS</div>
+      </div>
+      <div className="text-center">
+        <div className="bg-black bg-opacity-50 px-4 py-3 rounded-lg backdrop-blur-sm text-2xl md:text-3xl font-bold min-w-[70px]">
+          6
+        </div>
+        <div className="text-sm mt-2 font-medium">STAGES</div>
+      </div>
     </div>
   );
 };
@@ -56,7 +35,6 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
 const MainVisual: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-  const targetDate = new Date('2025-04-04T00:00:00+09:00');
 
   useEffect(() => {
     const video = videoRef.current;
@@ -114,28 +92,27 @@ const MainVisual: React.FC = () => {
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4 sm:mb-6 text-white/95 tracking-wider">
             - エンジニア、サハラを走る -
           </p>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-light bg-black/30 inline-block px-4 sm:px-6 py-2 rounded-full backdrop-blur-sm">
-            サハラマラソン2025への挑戦 | 2025.04.04 〜 2025.04.14
+          <div className="bg-green-600/80 backdrop-blur-sm px-6 py-3 rounded-full inline-block mb-4">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white">
+              🏆 サハラマラソン2025 完走達成！
+            </p>
+          </div>
+          <p className="text-base sm:text-lg md:text-xl font-light bg-black/30 inline-block px-4 sm:px-6 py-2 rounded-full backdrop-blur-sm">
+            2025年4月4日〜14日 | モロッコ・サハラ砂漠
           </p>
         </div>
         
         <div className="mt-6 sm:mt-10 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-          <p className="text-white text-base sm:text-lg mb-3 sm:mb-4 text-center font-medium uppercase tracking-widest">開始日まで</p>
-          <Countdown targetDate={targetDate} />
+          <p className="text-white text-base sm:text-lg mb-3 sm:mb-4 text-center font-medium uppercase tracking-widest">実績</p>
+          <CompletionInfo />
         </div>
         
         <div className="mt-8 sm:mt-14 animate-fade-in flex flex-col sm:flex-row gap-4 items-center" style={{ animationDelay: '0.6s' }}>
           <Link 
-            to="/project" 
+            to="https://note.com/amaino/n/n7c8f15c7d364" 
             className="btn-primary shadow-glow text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transform transition-transform hover:scale-105 w-full sm:w-auto text-center"
           >
-            プロジェクトについて
-          </Link>
-          <Link 
-            to="/support" 
-            className="btn-outline text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3 rounded-full transform transition-transform hover:scale-105 w-full sm:w-auto text-center"
-          >
-            応援する
+            完走報告を見る
           </Link>
         </div>
       </div>

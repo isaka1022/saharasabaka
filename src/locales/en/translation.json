@@ -120,5 +120,10 @@
     "title": "Contact",
     "description": "For inquiries about Sahara Sabaka or sponsorship, please use the form below.",
     "button": "Open Contact Form"
+  },
+  "links": {
+    "title": "Links",
+    "github_description": "Sahara Sabaku's GitHub repository where we share our project's source code and documentation.",
+    "twitter_description": "Official Twitter account of Sahara Sabaku, sharing latest updates and development progress."
   }
 } 
