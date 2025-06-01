@@ -571,6 +571,20 @@ const EquipmentsPage: React.FC = () => {
       </div>
 
       <h1 className="text-4xl font-bold mb-8 text-center">サハラマラソンの装備</h1>
+      
+      {/* 装備全体写真を追加 */}
+      <div className="relative mb-12 max-w-5xl mx-auto">
+        <div className="absolute -inset-4 bg-gradient-to-r from-yellow-100 to-orange-100 rounded-lg opacity-50 transform -rotate-1"></div>
+        <img
+          src="/images/equipments/equipments_eyecatch.png"
+          alt="サハラマラソン装備一覧"
+          className="relative w-full h-auto object-cover rounded-lg shadow-xl"
+        />
+        <div className="absolute bottom-4 left-4 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-sm">
+          サハラマラソンの全装備
+        </div>
+      </div>
+      
       <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-12 text-center">
         サハラマラソンでは、7日間のレース中に必要な全ての装備を自分で背負って走ります。
         極限の環境で生き抜くための装備選びは、レース完走の鍵となります。
