@@ -21,7 +21,7 @@ const HomePage: React.FC = () => {
               <YouTubeEmbed videoId="1VmMQglcQaQ" title="最新の活動動画" />
             </div>
             <div>
-              <YouTubeEmbed videoId="o2_XMQqGDQ8" title="サハラ砂漠の活動" />
+              <YouTubeEmbed videoId="pYspo2-335U" title="サハラ砂漠の活動" />
             </div>
           </div>
           <div className="text-center">

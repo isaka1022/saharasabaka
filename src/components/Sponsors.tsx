@@ -257,6 +257,9 @@ const Supporters: React.FC = () => {
                 <div className="bg-yellow-50 rounded-full px-6 py-2 text-yellow-800 font-medium hover:bg-yellow-100 transition-colors">
                   naopr
                 </div>
+                <div className="bg-yellow-50 rounded-full px-6 py-2 text-yellow-800 font-medium hover:bg-yellow-100 transition-colors">
+                  hidedote
+                </div>
               </div>
               <h4 className="text-lg font-bold text-center mb-4 text-gray-700">後援</h4>
               <div className="flex flex-wrap justify-center gap-4">
