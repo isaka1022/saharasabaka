@@ -7,7 +7,6 @@ import ProjectPage from './pages/ProjectPage';
 import ProfilePage from './pages/ProfilePage';
 import SupportPage from './pages/SupportPage';
 import ContactPage from './pages/ContactPage';
-import MembersPage from './pages/MembersPage';
 import RacePage from './pages/RacePage';
 import EquipmentsPage from './pages/EquipmentsPage';
 import Links from './pages/Links';

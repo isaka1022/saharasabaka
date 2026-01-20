@@ -42,22 +42,6 @@ const getStatusColor = (status: EquipmentStatus): string => {
   }
 };
 
-const calculateTotalWeight = (items: EquipmentItem[]): number => {
-  return items.reduce((sum, item) => sum + (item.weight || 0), 0);
-};
-
-const calculateTotalPrice = (items: EquipmentItem[]): number => {
-  return items.reduce((sum, item) => sum + (item.price || 0), 0);
-};
-
-const calculateTotalCategoryWeight = (categories: EquipmentCategory[]): number => {
-  return categories.reduce((sum, category) => sum + calculateTotalWeight(category.items), 0);
-};
-
-const calculateTotalCategoryPrice = (categories: EquipmentCategory[]): number => {
-  return categories.reduce((sum, category) => sum + calculateTotalPrice(category.items), 0);
-};
-
 const EquipmentsPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'bringing' | 'supported'>('bringing');
 
