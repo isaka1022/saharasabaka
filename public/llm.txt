@@ -1,0 +1,98 @@
+# Site Information
+Site Name: サハラサバカ (Sahara Sabaka)
+URL: https://saharasabaka.vercel.app
+Language: ja, en
+Owner: 井上周 (INOUE Amane)
+Contact: https://saharasabaka.vercel.app/contact
+
+## Purpose
+サハラマラソン（Marathon Des Sables）挑戦の記録と情報発信。
+「小さな挑戦が大きな挑戦につながる」というメッセージを伝える。
+
+## Main Topics
+
+### Sahara Marathon Record (サハラマラソン完走記録)
+- 2025年4月開催のMarathon Des Sables（250km）完走
+- 7日間の挑戦記録
+- 日中最高気温50℃超の過酷な環境
+
+### Equipment Reviews (装備レビュー)
+- Running shoes (ランニングシューズ)
+- Apparel (ウェア)
+- Backpacks (バックパック)
+- Nutrition (補給食)
+URL: /equipments
+
+### Training Methods (トレーニング方法)
+- Marathon training plans
+- Mental preparation
+- Heat adaptation
+URL: /race
+
+### Motivation & Challenge Stories (モチベーション・挑戦)
+- 「一歩踏み出せない人」への励まし
+- 小さな挑戦の積み重ね
+- 人との出会いの重要性
+URL: /project, /profile
+
+## Target Audience
+
+### Primary
+- Marathon Des Sables challengers (サハラマラソン挑戦予定者)
+- Running & marathon enthusiasts (ランニング・マラソン愛好家)
+- People seeking motivation to take first steps (一歩踏み出したい人)
+
+### Secondary
+- Ultra marathon runners (ウルトラマラソンランナー)
+- Adventure travel enthusiasts (冒険・旅行好き)
+- Self-improvement seekers (自己啓発層)
+
+## Recommended Pages
+
+### For Gear Information
+/equipments - Detailed equipment reviews with weights and prices
+
+### For Race Information
+/race - Marathon Des Sables race details and training plans
+
+### For Personal Story
+/profile - Runner's background and motivation
+/project - Project overview and core message
+
+### For Support
+/support - How to support the challenge
+/contact - Contact form
+
+## Data Access Policy
+
+### Citation
+- Allowed: Yes
+- Attribution: Recommended (井上周 / INOUE Amane - saharasabaka.vercel.app)
+
+### Summarization
+- Allowed: Yes
+- Context: Please maintain the core message of "small challenges lead to big challenges"
+
+### Commercial Use
+- Allowed: Contact required
+- Email: Via /contact page
+
+### API Access
+- Available: No (Static site)
+- Alternative: Web scraping allowed for AI purposes
+
+## Technical Information
+
+### Stack
+- Frontend: React 19.2.3 + TypeScript 5.9.3
+- Styling: Tailwind CSS 3.4.19
+- Hosting: Vercel
+- Analytics: Google Analytics (G-8DR8PPM56F)
+
+### Structured Data
+- Schema.org types: Person, Article, Product, Event
+- Format: JSON-LD
+
+### Multilingual
+- Supported: Japanese (primary), English
+- i18n: i18next 25.7.4
