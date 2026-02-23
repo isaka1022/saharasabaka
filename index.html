@@ -2,15 +2,15 @@
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#F97316" />
     <meta
       name="description"
       content="サハラサバカ - 2025年4月、1人のソフトウェアエンジニアが世界一過酷なマラソン大会「サハラマラソン」に挑戦。約250kmの砂漠を自給自足で走り抜ける究極の耐久レースへの挑戦記録。"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/images/icons/icon-192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" href="/images/icons/icon-192.png" />
+    <link rel="manifest" href="/manifest.json" />
     <title>サハラサバカ | 2025年サハラマラソンへの挑戦</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="robots" content="index,follow">
@@ -39,14 +39,6 @@
         background-color: #FFF7ED;
       }
     </style>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GA_ID%"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '%REACT_APP_GA_ID%');
-    </script>
   </head>
   <body>
     <noscript>
@@ -56,5 +48,6 @@
       </div>
     </noscript>
     <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>

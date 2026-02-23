@@ -2,7 +2,7 @@
 import { detectAIPlatform, isAITraffic } from './aiDetection';
 
 // Google Analyticsの測定ID
-export const GA_MEASUREMENT_ID = process.env.REACT_APP_GA_ID;
+export const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_ID;
 
 // gtagの型定義
 declare global {
