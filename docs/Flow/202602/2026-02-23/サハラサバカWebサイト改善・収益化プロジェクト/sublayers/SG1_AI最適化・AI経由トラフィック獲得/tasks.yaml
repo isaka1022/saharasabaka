@@ -1,0 +1,241 @@
+# tasks.yaml (SG1: AI最適化・AI経由トラフィック獲得)
+version: "2.2"
+layer_id: "L001-SG1"
+parent_layer_id: "L001"
+generated_at: "2026-02-23"
+decomposition_type: "tasks_only"  # 末端Layerのためタスクのみ
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Focus戦略情報（必須）
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+focus_strategy: "system_architect"
+focus_strategy_reason: |
+  技術実装が中心（llm.txt、構造化データ、GA4統合）。
+  System Architect視点で設計→実装→測定の3層構造で分解。
+  モジュール分割により再利用性と保守性を確保。
+focus_strategy_confirmed_by: "ai"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SubLayers: なし（末端Layer）
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+sublayers: []
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Tasks: このLayerで実行するタスク
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+tasks:
+  # ━━━ Phase 1: 基盤構築（即実装可能） ━━━
+
+  - id: "T-SG1-001"
+    name: "llm.txt作成・配置"
+    type: "implementation"
+    description: "LLM向けサイト情報ファイル（llm.txt）を作成しpublic/配下に配置"
+    status: "pending"
+    estimated_days: 0.5
+    priority: "P0"
+    command: "T-SG1-001_llm.txt作成・配置"
+    command_template_ref: "command_templates/システム構築/ファイル作成"
+    dependencies: []
+    deliverables:
+      - "public/llm.txt"
+    acceptance_criteria:
+      - "llm.txtにサイト情報が正しく記述されている"
+      - "https://saharasabaka.vercel.app/llm.txt でアクセス可能"
+      - "サイト概要、主要コンテンツ、推奨ページが含まれる"
+    implementation_notes: |
+      Context/01_llm.txt仕様.md の設計に従って作成。
+      デプロイ後に curl で動作確認。
+
+  - id: "T-SG1-002"
+    name: "基本構造化データ実装（WebSite, Person, SportsEvent）"
+    type: "implementation"
+    description: "Schema.org基本タイプ（WebSite, Person, SportsEvent）をJSON-LD形式で実装"
+    status: "pending"
+    estimated_days: 1
+    priority: "P0"
+    command: "T-SG1-002_基本構造化データ実装"
+    command_template_ref: "command_templates/システム構築/コンポーネント実装"
+    dependencies: []
+    deliverables:
+      - "src/components/StructuredData.tsx（共通コンポーネント）"
+      - "WebSite schema（トップページ）"
+      - "Person schema（プロフィールページ）"
+      - "SportsEvent schema（レースページ）"
+    acceptance_criteria:
+      - "Google Rich Results Test でエラーなし"
+      - "Schema.org Validator で検証OK"
+      - "各ページでJSON-LDが正しく出力されている"
+    implementation_notes: |
+      Context/02_構造化データ設計.md の設計に従う。
+      StructuredDataコンポーネントを作成し各ページで使用。
+
+  - id: "T-SG1-003"
+    name: "AI Referer検出ロジック実装"
+    type: "implementation"
+    description: "AI検索プラットフォーム（ChatGPT, Claude等）からのアクセスを検出するロジック"
+    status: "pending"
+    estimated_days: 1
+    priority: "P0"
+    command: "T-SG1-003_AI検出ロジック実装"
+    command_template_ref: "command_templates/システム構築/ユーティリティ実装"
+    dependencies: []
+    deliverables:
+      - "src/utils/aiDetection.ts"
+    acceptance_criteria:
+      - "AI_PLATFORMS定数が定義されている"
+      - "detectAIPlatform関数が正しく動作"
+      - "isAITraffic関数が正しく動作"
+      - "ChatGPT, Claude, Perplexity, Gemini, Bing Chatを検出可能"
+    implementation_notes: |
+      Context/03_AI経由トラフィック測定.md の設計に従う。
+      RefererとUser-Agentの両方をチェック。
+
+  - id: "T-SG1-004"
+    name: "GA4カスタムイベント設定"
+    type: "implementation"
+    description: "GA4でai_visit、ai_conversionイベントを送信する機能を実装"
+    status: "pending"
+    estimated_days: 1
+    priority: "P0"
+    command: "T-SG1-004_GA4カスタムイベント設定"
+    command_template_ref: "command_templates/システム構築/アナリティクス統合"
+    dependencies: ["T-SG1-003"]  # AI検出ロジックに依存
+    deliverables:
+      - "src/utils/analytics.ts（trackAIVisit, trackAIConversion追加）"
+      - "App.tsx（初期化コード追加）"
+      - "アフィリエイトリンクコンポーネント（トラッキング追加）"
+    acceptance_criteria:
+      - "ai_visitイベントがGA4で記録される"
+      - "ai_conversionイベントがGA4で記録される"
+      - "ai_platform パラメータが正しく送信される"
+      - "sessionStorageにプラットフォーム情報が保存される"
+    implementation_notes: |
+      Context/03_AI経由トラフィック測定.md の実装例に従う。
+      GA4のリアルタイムレポートで動作確認。
+
+  # ━━━ Phase 2: 拡張（SG2コンテンツ後） ━━━
+
+  - id: "T-SG1-005"
+    name: "拡張構造化データ実装（Article, Product, FAQPage）"
+    type: "implementation"
+    description: "ブログ記事・装備レビュー用の構造化データを実装"
+    status: "pending"
+    estimated_days: 1.5
+    priority: "P1"
+    command: "T-SG1-005_拡張構造化データ実装"
+    command_template_ref: "command_templates/システム構築/コンポーネント実装"
+    dependencies: ["T-SG1-002"]  # 基本構造化データに依存
+    blocked_by: "SG2コンテンツページ完成"  # SG2の進捗に依存
+    deliverables:
+      - "Article schema（ブログ記事）"
+      - "Product schema（装備レビュー）"
+      - "FAQPage schema（FAQ）"
+    acceptance_criteria:
+      - "各スキーマがGoogle Rich Results Test でエラーなし"
+      - "記事ページで正しくArticle schemaが出力"
+      - "装備ページで正しくProduct schemaが出力"
+    implementation_notes: |
+      SG2でブログ機能・装備レビューページが完成してから実装。
+      Context/02_構造化データ設計.md の設計に従う。
+
+  # ━━━ Phase 3: 測定・改善（継続） ━━━
+
+  - id: "T-SG1-006"
+    name: "GA4ダッシュボード構築"
+    type: "implementation"
+    description: "AI経由トラフィックを可視化するGA4カスタムレポートを作成"
+    status: "pending"
+    estimated_days: 0.5
+    priority: "P1"
+    command: "T-SG1-006_GA4ダッシュボード構築"
+    command_template_ref: "command_templates/システム構築/ダッシュボード作成"
+    dependencies: ["T-SG1-004"]  # GA4イベント設定に依存
+    deliverables:
+      - "GA4カスタムレポート「AI経由トラフィック」"
+    acceptance_criteria:
+      - "AI訪問数が表示される"
+      - "AIプラットフォーム別内訳が表示される"
+      - "AI経由CVRが計算される"
+      - "週次でデータを確認できる"
+    implementation_notes: |
+      GA4 > 探索 > 空白 から作成。
+      Context/03_AI経由トラフィック測定.md の設計に従う。
+
+  - id: "T-SG1-007"
+    name: "AI最適化の効果測定・レポート"
+    type: "verification"
+    description: "週次でAI経由トラフィックを分析し、改善提案を作成"
+    status: "pending"
+    estimated_days: 0  # 継続的タスク
+    priority: "P1"
+    command: null  # 検証系タスクのためnull
+    command_template_ref: null
+    dependencies: ["T-SG1-006"]  # ダッシュボードに依存
+    deliverables:
+      - "週次レポート（AI経由トラフィック推移）"
+    acceptance_criteria:
+      - "AI経由トラフィック比率が測定されている"
+      - "AI検索での引用回数が記録されている"
+      - "改善提案が週次で作成される"
+    implementation_notes: |
+      毎週月曜にGA4ダッシュボードを確認。
+      目標：AI経由トラフィック比率20-30%達成。
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Command Generation 設定
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+command_generation:
+  enabled: true
+  target_folder: "Commands/"
+  template_folder: "command_templates/"
+  naming_pattern: "{task_id}_{task_name}"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 依存関係マップ
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+dependencies_map:
+  parallel_execution:
+    - ["T-SG1-001", "T-SG1-002"]  # llm.txtと構造化データは並行可能
+  sequential_execution:
+    - ["T-SG1-003", "T-SG1-004"]  # AI検出→GA4イベント
+    - ["T-SG1-002", "T-SG1-005"]  # 基本→拡張構造化データ
+    - ["T-SG1-004", "T-SG1-006"]  # GA4イベント→ダッシュボード
+    - ["T-SG1-006", "T-SG1-007"]  # ダッシュボード→効果測定
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 実装フェーズ
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+implementation_phases:
+  phase1_immediate:
+    name: "基盤構築"
+    duration: "2-3日"
+    tasks: ["T-SG1-001", "T-SG1-002", "T-SG1-003", "T-SG1-004"]
+    description: "即実装可能な基盤技術"
+
+  phase2_content_dependent:
+    name: "コンテンツ連携"
+    duration: "1.5日"
+    tasks: ["T-SG1-005"]
+    description: "SG2コンテンツ完成後に実装"
+    blockers: ["SG2: ブログ機能追加", "SG2: 装備レビューページ"]
+
+  phase3_continuous:
+    name: "測定・改善"
+    duration: "継続"
+    tasks: ["T-SG1-006", "T-SG1-007"]
+    description: "継続的な測定と最適化"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# サマリー
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+summary:
+  sublayer_count: 0
+  task_count: 7
+  total_estimated_days: 5.5
+  immediate_tasks: 4  # Phase 1
+  blocked_tasks: 1    # T-SG1-005（SG2依存）
+  continuous_tasks: 1 # T-SG1-007
+  next_action: "T-SG1-001（llm.txt作成）またはT-SG1-002（構造化データ）から開始"
+  priority_order:
+    - "P0: T-SG1-001, T-SG1-002, T-SG1-003, T-SG1-004（基盤構築）"
+    - "P1: T-SG1-005, T-SG1-006, T-SG1-007（拡張・測定）"

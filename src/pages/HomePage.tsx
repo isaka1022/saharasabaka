@@ -5,10 +5,27 @@ import Project from '../components/Project';
 import Profile from '../components/Profile';
 import Supporters from '../components/Sponsors';
 import YouTubeEmbed from '../components/YouTubeEmbed';
+import { StructuredData } from '../components/StructuredData';
 
 const HomePage: React.FC = () => {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "サハラサバカ",
+    "alternateName": "Sahara Sabaka",
+    "url": "https://saharasabaka.vercel.app",
+    "description": "サハラマラソン挑戦の記録と情報発信サイト。「小さな挑戦が大きな挑戦につながる」をテーマに、装備レビュー、トレーニング方法、挑戦のストーリーを共有。",
+    "publisher": {
+      "@type": "Person",
+      "name": "井上周"
+    },
+    "inLanguage": ["ja", "en"]
+  };
+
   return (
-    <main>
+    <>
+      <StructuredData data={websiteSchema} />
+      <main>
       <MainVisual />
       <Project showPreparationInfo={false} />
       <section className="py-20 px-4 bg-gray-50">
@@ -48,6 +65,7 @@ const HomePage: React.FC = () => {
       <Profile showFullStory={false} />
       <Supporters />
     </main>
+    </>
   );
 };
 

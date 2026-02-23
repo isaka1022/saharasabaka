@@ -1,6 +1,40 @@
 import React from 'react';
+import { StructuredData } from '../components/StructuredData';
 
 const RacePage: React.FC = () => {
+  const sportsEventSchema = {
+    "@context": "https://schema.org",
+    "@type": "SportsEvent",
+    "name": "Marathon Des Sables 2025",
+    "alternateName": "サハラマラソン",
+    "description": "モロッコのサハラ砂漠で開催される250kmウルトラマラソン。7日間で全ての衣食住を背負って走る世界で最も過酷なレース。",
+    "startDate": "2025-04-20",
+    "endDate": "2025-04-26",
+    "location": {
+      "@type": "Place",
+      "name": "サハラ砂漠",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MA",
+        "addressRegion": "Morocco"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "Marathon Des Sables Organization",
+      "url": "https://www.marathondessables.com/"
+    },
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "sport": "Running",
+    "distance": "250 kilometers",
+    "duration": "P7D",
+    "competitor": {
+      "@type": "Person",
+      "name": "井上周"
+    }
+  };
+
   const competitions = [
     {
       name: 'S-Mountain The 4100D マウンテントレイル in 野沢温泉 2024',
@@ -48,8 +82,10 @@ const RacePage: React.FC = () => {
   ];
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-8 text-center">大会実績</h1>
+    <>
+      <StructuredData data={sportsEventSchema} />
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold mb-8 text-center">大会実績</h1>
       
       <div className="grid gap-6">
         {competitions.map((competition, index) => (
@@ -82,7 +118,8 @@ const RacePage: React.FC = () => {
           </div>
         ))}
       </div>
-    </div>
+      </div>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -10,16 +10,31 @@ import ContactPage from './pages/ContactPage';
 import RacePage from './pages/RacePage';
 import EquipmentsPage from './pages/EquipmentsPage';
 import Links from './pages/Links';
+import { trackAIVisit, pageview } from './utils/analytics';
 
-const Layout = ({ children }: { children: React.ReactNode }) => (
-  <div className="min-h-screen bg-white flex flex-col">
-    <Header />
-    <div className="flex-grow pt-16">{children}</div>
-    <Footer />
-  </div>
-);
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  const location = useLocation();
+
+  useEffect(() => {
+    // ページビュー送信
+    pageview(location.pathname);
+  }, [location]);
+
+  return (
+    <div className="min-h-screen bg-white flex flex-col">
+      <Header />
+      <div className="flex-grow pt-16">{children}</div>
+      <Footer />
+    </div>
+  );
+};
 
 function App() {
+  useEffect(() => {
+    // アプリ起動時にAI経由チェック
+    trackAIVisit();
+  }, []);
+
   return (
     <Router>
       <Layout>

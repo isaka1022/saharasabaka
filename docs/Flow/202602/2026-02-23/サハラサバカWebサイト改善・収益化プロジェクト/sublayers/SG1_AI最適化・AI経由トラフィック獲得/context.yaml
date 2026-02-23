@@ -1,0 +1,85 @@
+# context.yaml
+version: "1.0"
+layer_id: "L001-SG1"
+generated_at: "2026-02-23"
+
+# 親Contextフォルダへの参照（SubLayer用）
+parent_context_folder: "../../../Context"  # 親LayerのContextを参照
+
+# このLayerのContextドキュメント（詳細はContextフォルダ参照）
+context_documents:
+  - name: "llm.txt仕様"
+    url: "Context/01_llm.txt仕様.md"
+    summary: |
+      LLM向けサイト情報ファイルの設計。
+      サイト概要、主要コンテンツ、推奨ページ、データアクセスポリシーを記述。
+      配置場所：public/llm.txt
+
+  - name: "構造化データ設計"
+    url: "Context/02_構造化データ設計.md"
+    summary: |
+      Schema.org構造化データの設計（Person, Article, Product, Event, FAQPage, WebSite）。
+      JSON-LD形式でReactコンポーネント化。
+      優先順位：WebSite→Person→SportsEvent→Article/Product/FAQ。
+
+  - name: "AI経由トラフィック測定"
+    url: "Context/03_AI経由トラフィック測定.md"
+    summary: |
+      GA4カスタムイベントでAI経由トラフィックを測定。
+      対象：ChatGPT、Claude、Perplexity、Gemini、Bing Chat。
+      測定：訪問数、CV数、CVR、プラットフォーム別内訳。
+
+# 継承ルール（子Layerへの伝播制御）
+inheritance_rules:
+  from_parent:  # 親から継承
+    - "core_message"  # コアメッセージ
+    - "tech_stack"    # 技術スタック
+    - "brand_voice"   # ブランドボイス
+    - "ga_id"         # Google Analytics ID
+
+  local_only:  # このLayerのみ
+    - "ai_platforms"  # 対象AIプラットフォーム
+    - "llm_txt_spec"  # llm.txt仕様
+    - "schema_org_types"  # Schema.org実装タイプ
+
+# AI最適化固有情報
+ai_optimization_context:
+  target_ai_platforms:
+    - name: "ChatGPT"
+      priority: "high"
+      referers: ["chatgpt.com", "chat.openai.com"]
+    - name: "Claude"
+      priority: "high"
+      referers: ["claude.ai"]
+    - name: "Perplexity AI"
+      priority: "high"
+      referers: ["perplexity.ai"]
+    - name: "Google Gemini"
+      priority: "medium"
+      referers: ["gemini.google.com"]
+    - name: "Bing Chat"
+      priority: "medium"
+      referers: ["bing.com/chat"]
+
+  implementation_priorities:
+    phase1_immediate:
+      - "llm.txt作成・配置"
+      - "基本構造化データ（WebSite, Person）"
+      - "AI Referer検出ロジック"
+    phase2_content:
+      - "Article/Product構造化データ"
+      - "FAQ形式コンテンツ"
+    phase3_optimization:
+      - "AI経由トラフィック分析"
+      - "コンテンツ構造最適化"
+
+  success_metrics:
+    - metric: "AI経由トラフィック比率"
+      target: "20-30%"
+      current: "0%（未測定）"
+    - metric: "AI経由CVR"
+      target: "全体CVRの1.5倍"
+      current: "未設定"
+    - metric: "AI検索での引用回数"
+      target: "月10回以上"
+      current: "0回"

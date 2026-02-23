@@ -1,0 +1,188 @@
+# tasks.yaml (Recursive版 + AI最適化重視)
+version: "2.2"
+layer_id: "L001"
+generated_at: "2026-02-23"
+decomposition_type: "recursive"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Focus戦略情報（必須）
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+focus_strategy: "content_strategist_growth_hacker"
+focus_strategy_reason: |
+  Webサイト改善 + コンテンツ発信 + 収益化という複合的なGoalに対応。
+  Content Strategist視点でコンテンツ価値を提供し、
+  Growth Hacker視点でAI最適化・収益化・データ分析を実現。
+focus_strategy_confirmed_by: "user"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# SubLayers: 各々が独立したLayerとして再帰
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+sublayers:
+  - id: "SG1"
+    goal: "AI最適化・AI経由トラフィック獲得"
+    description: "llm.txt、AIO、LLMOによりAI検索経由の流入を最大化"
+    priority: "P0"
+    status: "pending_init"
+    mode: "concrete"
+    estimated_duration: "1週間"
+    layer_url: null  # aipo_01実行後に更新
+    key_deliverables:
+      - "llm.txt実装"
+      - "構造化データ強化"
+      - "AI経由トラフィック測定基盤"
+
+  - id: "SG2"
+    goal: "コンテンツ戦略策定・充実化"
+    description: "訪問者に役立つコンテンツを企画・制作・配信"
+    priority: "P0"
+    status: "pending_init"
+    mode: "concrete"
+    estimated_duration: "2週間"
+    layer_url: null
+    key_deliverables:
+      - "ブログ機能追加"
+      - "装備レビュー記事"
+      - "コンテンツカレンダー"
+      - "note連携戦略"
+
+  - id: "SG3"
+    goal: "収益化機能の実装"
+    description: "Amazonアソシエイト、AdSense等の収益化施策"
+    priority: "P1"
+    status: "pending_init"
+    mode: "concrete"
+    estimated_duration: "1週間"
+    layer_url: null
+    key_deliverables:
+      - "Amazonアソシエイト統合"
+      - "Google AdSense導入"
+      - "収益トラッキング設定"
+
+  - id: "SG4"
+    goal: "SEO・マルチチャネル配信"
+    description: "従来型SEO最適化とnote連携による配信強化"
+    priority: "P1"
+    status: "pending_init"
+    mode: "concrete"
+    estimated_duration: "1週間"
+    layer_url: null
+    key_deliverables:
+      - "メタタグ・OGP最適化"
+      - "note連携実装"
+      - "サイトマップ生成"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Tasks: このLayerで完結する単純作業
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+tasks:
+  - id: "T001"
+    name: "プロジェクト全体の進捗管理設定"
+    type: "management"
+    description: "4つのSubLayerの進捗を一元管理する仕組みを構築"
+    status: "pending"
+    estimated_days: 0.5
+    priority: "P0"
+    command: null  # 管理系タスクのためnull許可
+    command_template_ref: null
+    dependencies: []
+
+  - id: "T002"
+    name: "SubLayer間の依存関係整理"
+    type: "coordination"
+    description: "SG1-SG4の実行順序と並行作業可能性を明確化"
+    status: "pending"
+    estimated_days: 0.5
+    priority: "P0"
+    command: null  # 調整系タスクのためnull許可
+    command_template_ref: null
+    dependencies: []
+    notes: |
+      依存関係:
+      - SG1（AI最適化）: 独立実行可能、最優先
+      - SG2（コンテンツ）: SG1と並行可能
+      - SG3（収益化）: SG2の一部完成後に実装
+      - SG4（SEO/配信）: SG2のコンテンツを配信
+
+  - id: "T003"
+    name: "Instagram/YouTube連携の動作確認"
+    type: "verification"
+    description: "既存のInstagram/YouTube埋め込み機能が正常動作しているか確認"
+    status: "pending"
+    estimated_days: 1
+    priority: "P1"
+    command: "T003_既存連携機能検証"
+    command_template_ref: "command_templates/verification_templates/機能動作確認"
+    dependencies: []
+    verification_items:
+      - "InstagramFeed.tsx の動作確認"
+      - "YouTubeEmbed.tsx の動作確認"
+      - "APIトークンの有効性確認"
+
+  - id: "T004"
+    name: "AI経由トラフィック測定タグ設計"
+    type: "research"
+    description: "GA4でAI経由トラフィックを識別・測定するカスタムイベント設計"
+    status: "pending"
+    estimated_days: 1
+    priority: "P0"
+    command: "T004_AI経由トラフィック測定設計"
+    command_template_ref: "command_templates/research_templates/データ測定設計"
+    dependencies: []
+    deliverables:
+      - "AI Referer検出ロジック（chatgpt.com, claude.ai, perplexity.ai等）"
+      - "GA4カスタムイベント設計書"
+      - "AI経由CVR測定方法"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Command Generation 設定
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+command_generation:
+  enabled: true
+  target_folder: "Commands/"
+  template_folder: "command_templates/"
+  naming_pattern: "{task_id}_{task_name}"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# 依存関係マップ
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+dependencies_map:
+  parallel_execution:
+    - ["SG1", "SG2"]  # AI最適化とコンテンツは並行可能
+    - ["T001", "T002", "T004"]  # 親Layerタスクは並行可能
+  sequential_execution:
+    - ["SG2", "SG3"]  # コンテンツ完成後に収益化
+    - ["SG2", "SG4"]  # コンテンツ完成後に配信強化
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# AI最適化重点領域（SG1関連）
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ai_optimization_focus:
+  target_ai_platforms:
+    - "ChatGPT"
+    - "Claude"
+    - "Perplexity AI"
+    - "Google Gemini"
+    - "Bing Chat"
+
+  key_techniques:
+    - "llm.txt実装"
+    - "構造化データ（Schema.org）強化"
+    - "AI要約に適したコンテンツ構造"
+    - "FAQ形式コンテンツ充実"
+
+  success_metrics:
+    - "AI経由トラフィック比率"
+    - "AI検索結果での引用回数"
+    - "AI経由CVR"
+
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# サマリー
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+summary:
+  sublayer_count: 4
+  task_count: 4
+  total_estimated_duration: "4週間（並行実行で短縮可能）"
+  next_action: "SG1（AI最適化）のaipo_01_sense実行を推奨"
+  priority_order:
+    - "P0: SG1（AI最適化）、SG2（コンテンツ）、T001、T002、T004"
+    - "P1: SG3（収益化）、SG4（SEO/配信）、T003"

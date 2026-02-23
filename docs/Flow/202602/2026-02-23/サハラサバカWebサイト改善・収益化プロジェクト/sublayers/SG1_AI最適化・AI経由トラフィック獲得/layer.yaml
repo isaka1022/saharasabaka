@@ -1,0 +1,72 @@
+# Layer基本情報
+layer_id: "L001-SG1"
+layer_name: "AI最適化・AI経由トラフィック獲得"
+status: "active"
+created_at: "2026-02-23"
+
+# Goal定義
+goal:
+  description: "llm.txt、AIO、LLMOによりAI検索経由の流入を最大化"
+  success_criteria:
+    - "llm.txtが実装され、AI検索からアクセス可能"
+    - "構造化データ（Schema.org）が強化されている"
+    - "AI経由トラフィックをGA4で測定できている"
+    - "AI経由トラフィック比率が20-30%に到達"
+
+# 実行モード
+mode: "concrete"
+
+# 責任者と期限
+owner: "amane"
+deadline: "2026-03-02"
+
+# 階層関係
+parent_layer: "L001"
+parent_layer_name: "サハラサバカWebサイト改善・収益化プロジェクト"
+sublayers: []
+tasks:
+  - "T-SG1-001: llm.txt作成・配置"
+  - "T-SG1-002: 基本構造化データ実装"
+  - "T-SG1-003: AI Referer検出ロジック実装"
+  - "T-SG1-004: GA4カスタムイベント設定"
+  - "T-SG1-005: 拡張構造化データ実装"
+  - "T-SG1-006: GA4ダッシュボード構築"
+  - "T-SG1-007: AI最適化の効果測定・レポート"
+
+# パス情報
+paths:
+  flow: "docs/Flow/202602/2026-02-23/サハラサバカWebサイト改善・収益化プロジェクト/sublayers/SG1_AI最適化・AI経由トラフィック獲得"
+  context: "docs/Flow/202602/2026-02-23/サハラサバカWebサイト改善・収益化プロジェクト/sublayers/SG1_AI最適化・AI経由トラフィック獲得/Context"
+  parent_context: "docs/Flow/202602/2026-02-23/サハラサバカWebサイト改善・収益化プロジェクト/Context"
+
+# プロジェクト情報（親から継承）
+project:
+  name: "saharasabaka"
+  type: "React TypeScript Web Application"
+  tech_stack:
+    - "React 19.2.3"
+    - "TypeScript 5.9.3"
+    - "Tailwind CSS 3.4.19"
+    - "Vercel (デプロイ)"
+  analytics:
+    - "Google Analytics (G-8DR8PPM56F)"
+
+# AI最適化固有情報
+ai_optimization:
+  target_platforms:
+    - "ChatGPT"
+    - "Claude"
+    - "Perplexity AI"
+    - "Google Gemini"
+    - "Bing Chat"
+
+  techniques:
+    - "llm.txt実装"
+    - "Schema.org構造化データ"
+    - "AI要約最適化"
+    - "FAQ形式コンテンツ"
+
+  metrics:
+    - "AI経由トラフィック比率"
+    - "AI検索結果での引用回数"
+    - "AI経由CVR"

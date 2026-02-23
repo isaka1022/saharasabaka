@@ -1,0 +1,76 @@
+# context.yaml
+version: "1.0"
+layer_id: "L001"
+generated_at: "2026-02-23"
+
+# 親Contextフォルダへの参照（SubLayer用）
+parent_context_folder: null  # トップレベルLayerのため親なし
+
+# このLayerのContextドキュメント（詳細はContextフォルダ参照）
+context_documents:
+  - name: "プロジェクト概要"
+    url: "Context/01_プロジェクト概要.md"
+    summary: |
+      サハラマラソン挑戦を通じた「小さな挑戦→大きな挑戦」メッセージの発信サイト。
+      運営者：井上周（エンジニア）、目標：一歩踏み出せない人への励まし。
+
+  - name: "技術スタック"
+    url: "Context/02_技術スタック.md"
+    summary: |
+      React 19.2.3 + TypeScript 5.9.3、Tailwind CSS、i18next多言語対応。
+      Google Analytics導入済み（G-8DR8PPM56F）、Vercelでデプロイ。
+
+  - name: "既存サイト構造"
+    url: "Context/03_既存サイト構造.md"
+    summary: |
+      8ページ構成（ホーム、プロフィール、プロジェクト、レース、装備、応援、お問い合わせ、リンク）。
+      Instagram連携・YouTube埋め込み・スポンサー表示コンポーネント実装済み。
+
+  - name: "収益化の可能性"
+    url: "Context/04_収益化の可能性.md"
+    summary: |
+      フェーズ1: Amazonアソシエイト（装備）、Google AdSense。
+      フェーズ2: ブログ記事追加、メルマガ。
+      フェーズ3: デジタルコンテンツ販売、オンラインコーチング。
+
+  - name: "ターゲットユーザー"
+    url: "Context/05_ターゲットユーザー.md"
+    summary: |
+      メイン: ①一歩踏み出せない人、②ランニング愛好家、③冒険・挑戦好き。
+      サブ: ④自己啓発層、⑤企業スポンサー。
+      ペルソナ設定とコンテンツ戦略を整理。
+
+  - name: "AI最適化戦略"
+    url: "Context/06_AI最適化戦略.md"
+    summary: |
+      llm.txt、AIO、LLMOによるAI経由トラフィック獲得戦略。
+      ChatGPT/Claude/Perplexity等のAI検索での上位表示を目指す。
+      GA4でAI経由トラフィックを測定・最適化。
+
+# 継承ルール（子Layerへの伝播制御）
+inheritance_rules:
+  global_immutable:  # 全SubLayerで不変
+    - "core_message"  # 「小さな挑戦→大きな挑戦」メッセージ
+    - "tech_stack"    # 技術スタック
+    - "brand_voice"   # ブランドボイス
+  overridable:       # SubLayerで上書き可能
+    - "deadline"      # 期限
+    - "budget"        # 予算
+  local_only:        # SubLayerには継承しない
+    - "specific_tasks"  # 個別タスク詳細
+
+# プロジェクト固有情報
+project_specific:
+  ga_id: "G-8DR8PPM56F"
+  hosting: "Vercel"
+  repository: "/Users/amane/projects/saharasabaka"
+  current_status:
+    - "クラウドファンディング実施済み"
+    - "SNS発信中"
+    - "GA導入済み"
+
+  core_values:
+    - "一歩踏み出す勇気"
+    - "小さな挑戦の積み重ね"
+    - "人との出会いを大切に"
+    - "いつかは来ない、今やる"

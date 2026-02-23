@@ -1,0 +1,48 @@
+# Layer基本情報
+layer_id: "L001"
+layer_name: "サハラサバカWebサイト改善・収益化プロジェクト"
+status: "active"
+created_at: "2026-02-23"
+
+# Goal定義
+goal:
+  description: "サハラマラソン挑戦を発信するWebサイトを、訪問者にとって役立つサイトに改善し、収益化を実現する"
+  success_criteria:
+    - "訪問者にとって価値のあるコンテンツが充実している"
+    - "収益化の仕組みが実装されている"
+    - "GAでトラフィックと成果が測定できている"
+
+# 実行モード
+mode: "concrete"
+
+# 責任者と期限
+owner: "amane"
+deadline: "2026-03-23"
+
+# 階層関係
+parent_layer: null
+sublayers:
+  - "SG1: AI最適化・AI経由トラフィック獲得"
+  - "SG2: コンテンツ戦略策定・充実化"
+  - "SG3: 収益化機能の実装"
+  - "SG4: SEO・マルチチャネル配信"
+
+# パス情報
+paths:
+  flow: "docs/Flow/202602/2026-02-23/サハラサバカWebサイト改善・収益化プロジェクト"
+  context: "docs/Flow/202602/2026-02-23/サハラサバカWebサイト改善・収益化プロジェクト/Context"
+
+# プロジェクト情報
+project:
+  name: "saharasabaka"
+  type: "React TypeScript Web Application"
+  tech_stack:
+    - "React 19.2.3"
+    - "TypeScript 5.9.3"
+    - "Tailwind CSS 3.4.19"
+    - "i18next 25.7.4 (多言語対応)"
+    - "React Router DOM 7.0.2"
+    - "Swiper 12.0.3"
+    - "Vercel (デプロイ)"
+  analytics:
+    - "Google Analytics (既存アカウントあり)"
