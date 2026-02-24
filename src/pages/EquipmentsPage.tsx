@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AffiliateLink } from '../components/AffiliateLink';
 
 type EquipmentStatus = '確定' | '仮決定' | '未定';
 
@@ -614,13 +615,14 @@ const EquipmentsPage: React.FC = () => {
               {category.items.map((item, itemIndex) => (
                 <div key={itemIndex} className="group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
                   {item.link && (
-                    <a 
+                    <AffiliateLink
                       href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      productName={item.name}
+                      type="equipment"
                       className="absolute inset-0 z-10"
-                      aria-label={`${item.name}の詳細を見る`}
-                    />
+                    >
+                      <span className="sr-only">{item.name}の詳細を見る</span>
+                    </AffiliateLink>
                   )}
                   <div className="flex flex-row items-start p-4 sm:p-6">
                     <div className="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 relative bg-gray-50 rounded-lg overflow-hidden">
@@ -722,13 +724,14 @@ const EquipmentsPage: React.FC = () => {
                 {category.items.map((item, itemIndex) => (
                   <div key={itemIndex} className="group relative bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 cursor-pointer">
                     {item.sponsorLink && (
-                      <a 
+                      <AffiliateLink
                         href={item.sponsorLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        productName={item.name}
+                        type="equipment"
                         className="absolute inset-0 z-10"
-                        aria-label={`${item.name}のスポンサー詳細を見る`}
-                      />
+                      >
+                        <span className="sr-only">{item.name}のスポンサー詳細を見る</span>
+                      </AffiliateLink>
                     )}
                     <div className="flex flex-row items-start p-4 sm:p-6">
                       <div className="w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 relative bg-gray-50 rounded-lg overflow-hidden">

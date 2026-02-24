@@ -106,7 +106,7 @@ export function trackAIConversion(
 // アフィリエイトリンククリック追跡
 export function trackAffiliateClick(
   productName: string,
-  affiliateType: 'amazon' | 'rakuten'
+  affiliateType: 'amazon' | 'rakuten' | 'equipment' | 'other'
 ) {
   trackAIConversion('affiliate_click');
 
@@ -120,11 +120,12 @@ export function trackAffiliateClick(
 }
 
 // スポンサーお問い合わせ追跡
-export function trackSponsorInquiry() {
+export function trackSponsorInquiry(inquiryType?: string) {
   trackAIConversion('sponsor_inquiry');
 
   if (window.gtag && GA_MEASUREMENT_ID) {
     window.gtag('event', 'sponsor_inquiry', {
+      inquiry_type: inquiryType,
       ai_platform: sessionStorage.getItem('ai_platform')
     });
   }

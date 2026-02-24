@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackSponsorInquiry } from '../utils/analytics';
 
 const Supporters: React.FC = () => {
   return (
@@ -174,6 +175,7 @@ const Supporters: React.FC = () => {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSf6NUloIZWpsoxhZCU7_R3mDDTmwl5fdsMXFhEzHLvbRosALg/viewform?usp=header"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackSponsorInquiry('sponsor_general')}
                 className="inline-flex items-center px-8 py-4 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
               >
                 スポンサーに関するお問い合わせ
@@ -285,6 +287,7 @@ const Supporters: React.FC = () => {
                   href="https://docs.google.com/forms/d/e/1FAIpQLSf6NUloIZWpsoxhZCU7_R3mDDTmwl5fdsMXFhEzHLvbRosALg/viewform?usp=header"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackSponsorInquiry('equipment_support')}
                   className="inline-flex items-center px-8 py-4 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-200"
                 >
                   支援品に関するお問い合わせ

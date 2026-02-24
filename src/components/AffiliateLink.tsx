@@ -4,7 +4,7 @@ import { trackAffiliateClick } from '../utils/analytics';
 interface AffiliateLinkProps {
   href: string;
   productName: string;
-  type: 'amazon' | 'rakuten';
+  type: 'amazon' | 'rakuten' | 'equipment' | 'other';
   children: React.ReactNode;
   className?: string;
 }
