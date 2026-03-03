@@ -79,7 +79,7 @@ async function fetchSummaryText(): Promise<{ ga4: string; gsc: string; ai: strin
   const endDate = new Date().toISOString().split("T")[0];
   const startDate7 = new Date(Date.now() - 7 * 86400000).toISOString().split("T")[0];
 
-  const [ga4Res, gscRes, aiVisitRes] = await Promise.all([
+  const [ga4Res, gscRes] = await Promise.all([
     client.runReport({
       property: `properties/${GA4_PROPERTY_ID}`,
       dateRanges: [{ startDate: "7daysAgo", endDate: "today" }],
@@ -88,8 +88,13 @@ async function fetchSummaryText(): Promise<{ ga4: string; gsc: string; ai: strin
     webmasters.searchanalytics.query({
       siteUrl: GSC_SITE_URL,
       requestBody: { startDate: startDate7, endDate, rowLimit: 1 },
-    }),
-    client.runReport({
+    }).catch(() => ({ data: { rows: [] } })),
+  ]);
+
+  // AI経由（カスタムディメンション未登録の場合に備えてエラーハンドリング）
+  let aiVisitRows: typeof ga4Res[0]["rows"] = [];
+  try {
+    const [aiRes] = await client.runReport({
       property: `properties/${GA4_PROPERTY_ID}`,
       dateRanges: [{ startDate: "7daysAgo", endDate: "today" }],
       dimensions: [{ name: "customEvent:ai_platform" }],
@@ -101,8 +106,11 @@ async function fetchSummaryText(): Promise<{ ga4: string; gsc: string; ai: strin
         },
       },
       orderBys: [{ metric: { metricName: "eventCount" }, desc: true }],
-    }),
-  ]);
+    });
+    aiVisitRows = aiRes.rows ?? [];
+  } catch {
+    console.log("⚠️ AI経由トラフィックデータ取得失敗（カスタムディメンション未登録の可能性）");
+  }
 
   // GA4サマリー
   const ga4Row = ga4Res[0].rows?.[0];
@@ -120,9 +128,8 @@ async function fetchSummaryText(): Promise<{ ga4: string; gsc: string; ai: strin
   // AI経由サマリー
   let aiText = "*🤖 AI経由トラフィック (直近7日)*\n";
   let totalAI = 0;
-  const aiRows = aiVisitRes[0].rows ?? [];
-  if (aiRows.length > 0) {
-    aiRows.forEach((r) => {
+  if (aiVisitRows.length > 0) {
+    aiVisitRows.forEach((r) => {
       const platform = r.dimensionValues?.[0].value || "不明";
       const count = Number(r.metricValues?.[0].value ?? 0);
       totalAI += count;
