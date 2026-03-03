@@ -1,6 +1,6 @@
 {
   "name": "ga4-scripts",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Google Analytics 4 reporting scripts for Sahara Sabaka",
   "type": "module",
   "scripts": {
@@ -8,11 +8,15 @@
     "report": "tsx simple-report.ts",
     "detailed-report": "tsx detailed-report.ts",
     "ai-traffic-report": "tsx ai-traffic-report.ts",
-    "daily-report": "tsx daily-report-slack.ts"
+    "daily-report": "tsx daily-report.ts"
   },
   "dependencies": {
     "@google-analytics/data": "^4.11.0",
-    "dotenv": "^16.4.7"
+    "@slack/web-api": "^7.14.1",
+    "chart.js": "^4.5.1",
+    "chartjs-node-canvas": "^5.0.0",
+    "dotenv": "^16.4.7",
+    "googleapis": "^171.4.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.5",
