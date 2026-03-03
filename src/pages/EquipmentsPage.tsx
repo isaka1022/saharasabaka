@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { AffiliateLink } from '../components/AffiliateLink';
+import { StructuredData } from '../components/StructuredData';
 
 type EquipmentStatus = '確定' | '仮決定' | '未定';
 
@@ -546,8 +547,47 @@ const EquipmentsPage: React.FC = () => {
     },
   ];
 
+  const equipmentListSchema = useMemo(() => {
+    const allItems = bringingEquipments.flatMap(cat => cat.items);
+    return {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "サハラマラソン装備リスト",
+      "description": "Marathon Des Sables 250kmで実際に使用する装備一覧",
+      "url": "https://saharasabaka.vercel.app/equipments",
+      "numberOfItems": allItems.length,
+      "itemListElement": allItems.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "Product",
+          "name": item.brand && item.model ? `${item.brand} ${item.model}` : item.name,
+          ...(item.brand && { "brand": { "@type": "Brand", "name": item.brand } }),
+          "description": item.description,
+          ...(item.image && { "image": `https://saharasabaka.vercel.app${item.image}` }),
+          ...(item.price && {
+            "offers": {
+              "@type": "Offer",
+              "price": item.price,
+              "priceCurrency": "JPY",
+              "availability": "https://schema.org/InStock"
+            }
+          }),
+          ...(item.weight && {
+            "additionalProperty": {
+              "@type": "PropertyValue",
+              "name": "重量",
+              "value": `${item.weight}g`
+            }
+          })
+        }
+      }))
+    };
+  }, [bringingEquipments]);
+
   return (
     <div className="container mx-auto px-4 py-8">
+      <StructuredData data={equipmentListSchema} />
       <div className="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-8">
         <p className="text-yellow-700">
           <span className="font-bold">※ 装備リスト更新中：</span>

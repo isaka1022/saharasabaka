@@ -1,9 +1,68 @@
 import React from 'react';
 import { AffiliateLink } from '../components/AffiliateLink';
+import { StructuredData } from '../components/StructuredData';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "サハラマラソン装備選びの完全ガイド",
+  "description": "実際にサハラマラソンに挑戦する過程で学んだ装備選びのノウハウ。軽量性・信頼性・シンプルさの3原則に基づく装備選定ガイド。",
+  "author": {
+    "@type": "Person",
+    "name": "井上周",
+    "url": "https://saharasabaka.vercel.app/profile"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "サハラサバカ",
+    "url": "https://saharasabaka.vercel.app"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://saharasabaka.vercel.app/equipment-guide"
+  },
+  "datePublished": "2025-05-01",
+  "dateModified": "2026-03-03",
+  "keywords": ["サハラマラソン", "装備", "Marathon Des Sables", "トレイルランニング", "装備ガイド"],
+  "articleSection": "装備ガイド"
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "サハラマラソンの装備の総重量はどのくらい？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "全装備の総重量は6.5kg〜8kg程度に抑えるのが理想的です。1gの重量差が体への負担に直結します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "サハラマラソンで最も重要な装備は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "シューズ、バックパック、寝袋の3つが最重要です。極限環境で7日間使用するため、信頼性の高いモデルを選ぶことが重要です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "サハラマラソンにおすすめのシューズは？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MERRELL AGILITY PEAK 5がおすすめです。砂地でのグリップ力とクッション性のバランスが優れており、250km走破しても問題ありませんでした。"
+      }
+    }
+  ]
+};
 
 const EquipmentGuidePage: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <StructuredData data={articleSchema} />
+      <StructuredData data={faqSchema} />
       <h1 className="text-4xl font-bold mb-8">サハラマラソン装備選びの完全ガイド</h1>
 
       <div className="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-8">
